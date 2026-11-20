@@ -42,6 +42,39 @@ jobs:
         working-directory: .
         run: node scripts/check-knowledge.mjs
 
+      - name: Проверить контрольные суммы вымышленных данных
+        working-directory: .
+        run: |
+          $fixtureRoot = Get-Item -LiteralPath research-data/fixtures -ErrorAction Stop
+          if ($fixtureRoot.Attributes -band [IO.FileAttributes]::ReparsePoint) {
+            throw 'Каталог вымышленных данных не должен быть ссылкой.'
+          }
+          $manifest = Get-Content -LiteralPath research-data/fixtures/manifest.json -Raw -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
+          if ($manifest.files -isnot [pscustomobject]) { throw 'В манифесте отсутствует перечень файлов.' }
+          $entries = @($manifest.files.PSObject.Properties)
+          if ($entries.Count -eq 0) { throw 'Перечень файлов манифеста пуст.' }
+          $failures = @()
+          foreach ($entry in $entries) {
+            if ($entry.Name -match '[/\\:]' -or $entry.Name -in @('', '.', '..')) {
+              throw "Недопустимый путь за пределами каталога вымышленных данных: $($entry.Name)"
+            }
+            if ("$($entry.Value)" -notmatch '^[a-f0-9]{64}$') {
+              throw "Недопустимая контрольная сумма в манифесте: $($entry.Name)"
+            }
+            try {
+              $file = Get-Item -LiteralPath (Join-Path $fixtureRoot.FullName $entry.Name) -ErrorAction Stop
+              if ($file.PSIsContainer -or ($file.Attributes -band [IO.FileAttributes]::ReparsePoint)) {
+                throw 'Нужен обычный файл внутри каталога вымышленных данных.'
+              }
+              $actualHash = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256 -ErrorAction Stop).Hash
+              if ($actualHash -ne $entry.Value) { $failures += "Не совпала SHA-256: $($entry.Name)" }
+            } catch {
+              $failures += "Не удалось проверить $($entry.Name): $($_.Exception.Message)"
+            }
+          }
+          if ($failures.Count -gt 0) { throw ($failures -join "`n") }
+          Write-Output "Совпали контрольные суммы всех файлов манифеста: $($entries.Count)."
+
       - name: Установить точные зависимости приложения
         id: install
         run: npm.cmd ci

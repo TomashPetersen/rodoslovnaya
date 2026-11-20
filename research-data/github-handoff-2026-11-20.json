@@ -1,7 +1,7 @@
 {
   "checkedOn": "2026-11-20",
   "timezone": "Europe/Astrakhan",
-  "status": "ready-for-initial-push",
+  "status": "initial-push-confirmed-followup-ready",
   "authorization": "Владелец поручил общий коммит и отправку в новый публичный репозиторий своего аккаунта через внутренний браузер",
   "repository": {
     "url": "https://github.com/TomashPetersen/rodoslovnaya",
@@ -9,7 +9,8 @@
     "visibility": "public",
     "branch": "main",
     "createdInBrowser": true,
-    "pushNotYetVerified": true
+    "pushNotYetVerified": false,
+    "initialCommit": "c85e16468dbd0947f00096f8d1d26d946bd7fb43"
   },
   "scope": "Исходное приложение, проектная БЗ, исследование, материалы размещения, инструкции совместной разработки и проверки GitHub",
   "applicationChecks": {
@@ -1783,7 +1784,7 @@
   ],
   "note": "Этот журнал фиксирует состояние перед первоначальной отправкой. Фактический коммит, удаленную ветку, защиту и запуск GitHub Actions проверять по GitHub и текущему Git; запись не подменяет их подтверждение.",
   "remaining": [
-    "Подтвердить первоначальную отправку и настройку main по фактическому GitHub",
+    "Подтвердить корректирующую отправку и повторный запуск GitHub Actions по фактическому GitHub",
     "У Натальи еще нет аккаунта GitHub: приглашение не отправлено; публичное клонирование доступно без регистрации",
     "Открыты прежние 10 умеренных замечаний средств разработки и первопричина отказов памяти общего тестового исполнителя",
     "Настоящие телефоны и самостоятельное семейное испытание остаются открытыми"
@@ -2144,5 +2145,54 @@
     "githubRunNotYetVerified": true
   },
   "finalizedAt": "2026-11-20T12:13:17.4026403+04:00",
-  "candidateCount": 100
+  "candidateCount": 100,
+  "candidateManifestNote": "Перечень и контрольные суммы относятся к рабочей копии перед первой индексацией, не к нормализованным Git байтам. В первоначальном Git три испытательных файла получили другие окончания строк; это отдельно выявлено и исправляется без изменения манифеста.",
+  "initialCi": {
+    "url": "https://github.com/TomashPetersen/rodoslovnaya/actions/runs/44701256256",
+    "conclusion": "failure",
+    "failedStep": "Проверить ссылки и достижимость документов",
+    "reason": "После Windows checkout CRLF вызывают ложные ошибки якорей",
+    "errors": 24,
+    "applicationStepsSkipped": true
+  },
+  "followupFix": {
+    "scope": "Переносимость окончаний строк, проверяющий скрипт и контрольные суммы вымышленных данных",
+    "applicationCodeChanged": false,
+    "before": {
+      "crlfErrors": 24,
+      "lfErrors": 0
+    },
+    "after": {
+      "crErrors": 0,
+      "lfErrors": 0,
+      "crlfErrors": 0
+    },
+    "selfTestPassed": 33,
+    "selfTestTotal": 33,
+    "independentNegativeFixtures": 15,
+    "gitattributes": "LF для исходников/документов, без преобразования байтов fixtures/evidence",
+    "restoredFixtureBytes": [
+      "research-data/fixtures/family-1000.ged",
+      "research-data/fixtures/family-15.ged",
+      "research-data/fixtures/story.txt"
+    ],
+    "manifestChanged": false,
+    "fixtureCiStepVerified": 9,
+    "reuseEvidence": "Приложение, его зависимости и тесты не менялись после полного покрытия 36/2/0. Повторены затронутые проверки БЗ, форматирования, окончаний строк и испытательных данных.",
+    "followupCiNotYetVerified": true,
+    "stagedFixtureHashesPassed": 9,
+    "fixtureSemanticDiffEmpty": true,
+    "independentFixtureGateCases": 4
+  },
+  "mainProtection": {
+    "verified": true,
+    "requiredContext": ["Проверки Windows и Edge"],
+    "requiredApprovals": 1,
+    "codeOwnersRequired": true,
+    "dismissStaleReviews": true,
+    "conversationResolution": true,
+    "forcePushAllowed": false,
+    "deletionAllowed": false,
+    "adminBypassRetained": true
+  }
 }

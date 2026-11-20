@@ -304,6 +304,12 @@ function links(source) {
 }
 
 function inspect(documents, lookup) {
+  documents = new Map(
+    [...documents].map(([name, source]) => [
+      name,
+      source.replace(/\r\n?/g, "\n"),
+    ]),
+  );
   const errors = [];
   const warnings = [];
   const graph = new Map([...documents.keys()].map((name) => [name, new Set()]));
@@ -535,6 +541,36 @@ function selfTest() {
       "битая обычная ссылка",
       { "INDEX.md": "[Нет](missing.md)" },
       "цель не существует",
+    ],
+    [
+      "кириллический заголовок и оба вида якорей с CRLF",
+      {
+        "INDEX.md":
+          "# Русский раздел\r\n[Раздел](#русский-раздел)\r\n[[INDEX#русский-раздел|Раздел]]\r\n",
+      },
+      undefined,
+    ],
+    [
+      "ограждение цитаты и вложенная ссылка с CRLF",
+      {
+        "INDEX.md":
+          "# Карта\r\n> ```md\r\n> [Нет](missing.md)\r\n> # Ложный\r\n> ```\r\n- Раздел\r\n    - [Раздел](knowledge/map.md#раздел)\r\n[[knowledge/map#раздел|Раздел]]\r\n",
+        "knowledge/map.md": "# Раздел\r\n",
+      },
+      undefined,
+    ],
+    [
+      "оба вида якорей с окончаниями строк CR",
+      {
+        "INDEX.md":
+          "# Русский раздел\r[Раздел](#русский-раздел)\r[[INDEX#русский-раздел|Раздел]]\r",
+      },
+      undefined,
+    ],
+    [
+      "лишний дефис в якоре не допускается при CRLF",
+      { "INDEX.md": "# Раздел\r\n[Нет](#раздел-)\r\n" },
+      "якорь не найден",
     ],
     [
       "неверный якорь",

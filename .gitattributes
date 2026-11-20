@@ -1,0 +1,6 @@
+# Одинаковые окончания строк в исходниках и документах на разных компьютерах.
+* text=auto eol=lf
+
+# Контрольные суммы испытательных файлов относятся к точным байтам.
+research-data/fixtures/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research-data/evidence/** -text
