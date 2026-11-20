@@ -1,0 +1,231 @@
+0 HEAD
+1 SOUR SYNTHETIC-RESEARCH
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 NOTE Все сведения вымышлены. Частный тестовый набор.
+0 @I1@ INDI
+1 NAME Алексей Сергеевич /Морозов/
+2 GIVN Алексей Сергеевич
+2 SURN Морозов
+1 SEX M
+1 BIRT
+2 DATE 12 MAY 1985
+2 PLAC Ленинград, РСФСР, СССР
+2 SOUR @S1@
+3 QUAY 2
+1 NICK Алеша
+1 OBJE @O1@
+1 OBJE @O2@
+1 NOTE Вымышленный рассказ: семья переехала из Ленинграда.
+1 FAMS @F1@
+1 FAMC @F2@
+2 PEDI birth
+0 @I2@ INDI
+1 NAME Ирина Николаевна /Волкова/
+2 GIVN Ирина Николаевна
+2 SURN Волкова
+1 SEX F
+1 BIRT
+2 DATE 3 JUN 1987
+1 NAME Ирина Николаевна /Морозова/
+2 TYPE married
+1 OBJE @O3@
+1 FAMS @F1@
+1 FAMC @F6@
+2 PEDI birth
+0 @I3@ INDI
+1 NAME Софья Алексеевна /Морозова/
+2 GIVN Софья Алексеевна
+2 SURN Морозова
+1 SEX F
+1 BIRT
+2 DATE 2 FEB 2010
+1 FAMC @F1@
+2 PEDI birth
+0 @I4@ INDI
+1 NAME Павел Алексеевич /Морозов/
+2 GIVN Павел Алексеевич
+2 SURN Морозов
+1 SEX M
+1 BIRT
+2 DATE 2008
+1 ADOP
+2 FAMC @F1@
+3 ADOP BOTH
+1 NOTE Биологические родители неизвестны.
+1 FAMC @F1@
+2 PEDI adopted
+0 @I5@ INDI
+1 NAME Сергей Петрович /Морозов/
+2 GIVN Сергей Петрович
+2 SURN Морозов
+1 SEX M
+1 BIRT
+2 DATE 1960
+1 FAMS @F2@
+1 FAMS @F3@
+1 FAMC @F4@
+2 PEDI birth
+0 @I6@ INDI
+1 NAME Елена Ивановна /Морозова/
+2 GIVN Елена Ивановна
+2 SURN Морозова
+1 SEX F
+1 BIRT
+2 DATE 1962
+1 NAME Елена Ивановна /Соколова/
+2 TYPE birth
+1 OBJE @O4@
+1 FAMS @F2@
+1 FAMC @F5@
+2 PEDI birth
+0 @I7@ INDI
+1 NAME Ольга Андреевна /Морозова/
+2 GIVN Ольга Андреевна
+2 SURN Морозова
+1 SEX F
+1 BIRT
+2 DATE 1965
+1 FAMS @F3@
+0 @I8@ INDI
+1 NAME Михаил Сергеевич /Морозов/
+2 GIVN Михаил Сергеевич
+2 SURN Морозов
+1 SEX M
+1 BIRT
+2 DATE 1997
+1 FAMC @F3@
+2 PEDI birth
+0 @I9@ INDI
+1 NAME Петр Алексеевич /Морозов/
+2 GIVN Петр Алексеевич
+2 SURN Морозов
+1 SEX M
+1 BIRT
+2 DATE ABT 1930
+2 SOUR @S1@
+3 QUAY 2
+1 BIRT
+2 DATE 1931
+2 SOUR @S2@
+3 QUAY 0
+1 OBJE @O5@
+1 OBJE @O6@
+1 FAMS @F4@
+0 @I10@ INDI
+1 NAME Анна Михайловна /Морозова/
+2 GIVN Анна Михайловна
+2 SURN Морозова
+1 SEX F
+1 BIRT
+2 DATE 1932
+1 FAMS @F4@
+0 @I11@ INDI
+1 NAME Иван Васильевич /Соколов/
+2 GIVN Иван Васильевич
+2 SURN Соколов
+1 SEX M
+1 BIRT
+2 DATE 1937
+1 FAMS @F5@
+0 @I12@ INDI
+1 NAME Мария Федоровна /Соколова/
+2 GIVN Мария Федоровна
+2 SURN Соколова
+1 SEX F
+1 BIRT
+2 DATE 1938
+1 FAMS @F5@
+0 @I13@ INDI
+1 NAME Николай Степанович /Волков/
+2 GIVN Николай Степанович
+2 SURN Волков
+1 SEX M
+1 BIRT
+2 DATE 1960
+1 FAMS @F6@
+1 FAMC @F7@
+2 PEDI birth
+0 @I14@ INDI
+1 NAME Татьяна Павловна /Волкова/
+2 GIVN Татьяна Павловна
+2 SURN Волкова
+1 SEX F
+1 BIRT
+2 DATE 1963
+1 FAMS @F6@
+0 @I15@ INDI
+1 NAME Степан Андреевич /Волков/
+2 GIVN Степан Андреевич
+2 SURN Волков
+1 SEX M
+1 BIRT
+2 DATE 1935
+1 FAMS @F7@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 CHIL @I4@
+0 @F2@ FAM
+1 HUSB @I5@
+1 WIFE @I6@
+1 CHIL @I1@
+1 MARR
+2 DATE 1982
+1 DIV
+2 DATE 1990
+0 @F3@ FAM
+1 HUSB @I5@
+1 WIFE @I7@
+1 CHIL @I8@
+1 MARR
+2 DATE 1995
+0 @F4@ FAM
+1 HUSB @I9@
+1 WIFE @I10@
+1 CHIL @I5@
+0 @F5@ FAM
+1 HUSB @I11@
+1 WIFE @I12@
+1 CHIL @I6@
+0 @F6@ FAM
+1 HUSB @I13@
+1 WIFE @I14@
+1 CHIL @I2@
+0 @F7@ FAM
+1 HUSB @I15@
+1 CHIL @I13@
+0 @O1@ OBJE
+1 FILE photo-1.png
+2 FORM png
+1 TITL Вымышленный тестовый материал
+0 @O2@ OBJE
+1 FILE photo-2.png
+2 FORM png
+1 TITL Вымышленный тестовый материал
+0 @O3@ OBJE
+1 FILE photo-3.png
+2 FORM png
+1 TITL Вымышленный тестовый материал
+0 @O4@ OBJE
+1 FILE photo-4.png
+2 FORM png
+1 TITL Вымышленный тестовый материал
+0 @O5@ OBJE
+1 FILE photo-5.png
+2 FORM png
+1 TITL Вымышленный тестовый материал
+0 @O6@ OBJE
+1 FILE document.pdf
+2 FORM pdf
+1 TITL Вымышленный тестовый материал
+0 @S1@ SOUR
+1 TITL Вымышленный документ о рождении
+1 NOTE Учебный источник, не архивная запись.
+0 @S2@ SOUR
+1 TITL Вымышленный семейный рассказ
+1 NOTE Учебный источник с противоречащей датой.
+0 TRLR

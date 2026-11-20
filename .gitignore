@@ -1,0 +1,24 @@
+app/node_modules/
+app/dist/
+app/test-results/
+app/playwright-report/
+app/.vite/
+app/*.tsbuildinfo
+output/
+*.log
+
+# Локально установленные программы исследования не распространяются с проектом.
+research-data/apps/
+research-data/downloads/
+
+# Локальные настройки и секреты.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.obsidian/
+.DS_Store
+Thumbs.db

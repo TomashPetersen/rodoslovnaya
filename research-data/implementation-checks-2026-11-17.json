@@ -1,0 +1,169 @@
+{
+  "checkedOn": "2026-11-17",
+  "timezone": "Europe/Astrakhan",
+  "status": "local-candidate",
+  "applicationFingerprintSha256": "a7f7885029e2c91ca0696e8654b56873ee46cc4aa7e2260d25ab83aca4c8b9e2",
+  "environment": {
+    "os": "Windows",
+    "node": "24.15.0",
+    "browser": "Microsoft Edge 157.0.4341.60",
+    "mobile": "Имитация Pixel 7; настоящее устройство не проверялось"
+  },
+  "checks": {
+    "unit": {
+      "passed": 130,
+      "files": 9
+    },
+    "browser": {
+      "startTime": "2026-11-16T22:20:45.067Z",
+      "duration": 167550.95500000002,
+      "expected": 36,
+      "skipped": 2,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "additionalVolume": {
+      "startTime": "2026-11-16T22:25:34.123Z",
+      "duration": 14224.663,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "productionAuditVulnerabilities": 0,
+    "format": "passed",
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "documents": {
+      "files": 4,
+      "localLinks": 15,
+      "sections": 16,
+      "criteria": 12,
+      "languageReview": "passed"
+    }
+  },
+  "skipped": [
+    {
+      "project": "chromium",
+      "test": "возврат из списка восстанавливает камеру, а новая карточка не использует старую историю"
+    },
+    {
+      "project": "mobile-chromium",
+      "test": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь"
+    }
+  ],
+  "measurements": [
+    {
+      "run": "full",
+      "project": "chromium",
+      "test": "пять автономных запусков, размещений 80 карточек и открытий человека",
+      "values": {
+        "launchMs": [1260, 1284, 1533, 1304, 1317],
+        "treeMs": [933, 949, 1120, 930, 947],
+        "cardMs": [133, 137, 110, 148, 125],
+        "heapBytes": [28745976, 18766007, 35525638, 34850430, 38279317],
+        "memoryScope": "Только куча JavaScript, не вся память процесса и файлов"
+      }
+    },
+    {
+      "run": "full",
+      "project": "mobile-chromium",
+      "test": "пять автономных запусков, размещений 80 карточек и открытий человека",
+      "values": {
+        "launchMs": [1305, 1551, 1685, 1966, 1494],
+        "treeMs": [985, 1006, 1060, 1432, 939],
+        "cardMs": [144, 148, 128, 110, 148],
+        "heapBytes": [22129144, 34619435, 19133358, 37625536, 39620853],
+        "memoryScope": "Только куча JavaScript, не вся память процесса и файлов"
+      }
+    },
+    {
+      "run": "full",
+      "project": "chromium",
+      "test": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+      "values": {
+        "people": 100,
+        "files": 50,
+        "originalBytes": 100000000,
+        "zipBytes": 100120347,
+        "importMs": 4844,
+        "exportMs": 4512
+      }
+    },
+    {
+      "run": "full",
+      "project": "chromium",
+      "test": "поиск по тысяче людей возвращает нужную карточку",
+      "values": {
+        "measurementsMs": [218, 178, 189, 209, 204],
+        "medianMs": 204,
+        "worstMs": 218
+      }
+    },
+    {
+      "run": "full",
+      "project": "mobile-chromium",
+      "test": "поиск по тысяче людей возвращает нужную карточку",
+      "values": {
+        "measurementsMs": [219, 197, 209, 173, 207],
+        "medianMs": 207,
+        "worstMs": 219
+      }
+    },
+    {
+      "run": "volume-memory",
+      "project": "chromium",
+      "test": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+      "values": {
+        "people": 100,
+        "files": 50,
+        "originalBytes": 100000000,
+        "zipBytes": 100120347,
+        "importMs": 2989,
+        "exportMs": 2572,
+        "heapAfterImport": 206078746,
+        "heapAfterExport": 207329476,
+        "memoryScope": "Куча JavaScript основной страницы; не пиковая память процесса, файлов или вычислительного потока"
+      }
+    }
+  ],
+  "notVerified": [
+    "Настоящие Android/iPhone, установленное приложение и обычный путь HEIC",
+    "Самостоятельное использование владельцем и двумя получателями, перенос и печать на настоящих устройствах",
+    "Пиковая память всего браузера, файлов и вычислительных потоков; замеры кучи JavaScript не равны ей"
+  ],
+  "sourceHashes": {
+    "app/index.html": "9aa8a2bc8db272788480b167e0987be3537727eb1de3384acd0eef956cab1f89",
+    "app/package-lock.json": "35d5b8fb8d5a868a368e381f87c4440a077d8068ecce11dc6076e11658f9245a",
+    "app/package.json": "adab51aa2d7df726d19fc96556c4524ed076ae23463fdf53260c9fd248a9594f",
+    "app/public/apple-touch-icon.png": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340",
+    "app/public/icon-192.png": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1",
+    "app/public/icon-512.png": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b",
+    "app/public/icon.svg": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd",
+    "app/src/App.tsx": "d3435cf17e43c2454783c0700e2ed4c55b4460e4acfbad9e2ff6126ed2ae9500",
+    "app/src/components/ArchiveView.tsx": "2cf893a1dd8e1d2d27900ac96caadc481b0f674d68e061e48ad31a4de06bde8b",
+    "app/src/components/editor-common.tsx": "54eb4e46113dc63affd2db0f6f542c3251d0dd3da6c2dcd8b48dd2e63859f219",
+    "app/src/components/EntryForms.tsx": "70beef930a04a0ce9829f2188f925d8c48ac483f31837b1798891a3619e4782b",
+    "app/src/components/family-tree.css": "3c7ccf48770f9bac10658766824fe2c0091c157c94124d20cdf1d9ea5ab0e1ee",
+    "app/src/components/FamilyTree.tsx": "2c42045294b8c9762e9d9d5dc783d1d74068e555ae473bf9f7e98753153e3e0c",
+    "app/src/components/MaterialsView.tsx": "640c725a344da6ffc6da5a04bcd52837d9d8a096587128fa2197492067abe421",
+    "app/src/components/PersonEditor.tsx": "10aa061848994eec0aac7efaab837cda5c553aabd1cc655484dd6c7c5c2336b4",
+    "app/src/components/tree-layout.ts": "aa2e02252308029960b93e4c71679b0e85fa39f08266002bbdba22568548edd0",
+    "app/src/domain/capacity.ts": "522ad2bbf1c52d6d1cad1723c24e7a557d8c7c0e02fc4bba8fd9055f9ce532ef",
+    "app/src/domain/model.ts": "477b5243e0c1d1ccba886439215028aa7cba80aced1a7db3454acb6c869132da",
+    "app/src/domain/types.ts": "b07ce3baa13e92f76680e871a22301fbbf992704749b4c380c494fd48b64e7b6",
+    "app/src/main.tsx": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0",
+    "app/src/media.ts": "6cecac1374b54c073bde66df06a4a6e509d6e49b2eb6cea43c9dee5496fae755",
+    "app/src/storage/editor-lock.ts": "a6f3d94d2bea903b1a99d7b7894124998900140b76d1d1c40017144465b9cb71",
+    "app/src/storage/repository.ts": "9ad6d1aae635062d025750e3317ca3094beef279b134c45e06bee4b63b8700d4",
+    "app/src/storage/use-project.ts": "7f63a8c3c9f0344d90beccb84e6af0a94afdb5738556b32ca7766b7587a197a2",
+    "app/src/styles.css": "7dff522bf527158f0bb215d9f86918ac2579d44365a93f5527314d17dbc88b49",
+    "app/src/transfer/archive-client.ts": "d0d7f5d97d6007fdd1b0afefbfd922480891d7771d2dc32920c8fabf5b2d7081",
+    "app/src/transfer/archive.ts": "1a7dabca3bd20aaf8ae694a63f7c6739bc6de019955298bebb6a37c9291bfc64",
+    "app/src/transfer/archive.worker.ts": "64f8452ee45c9245ba07488cbef4c1c40c73bb98b671c57c7c2bea0b12a92878",
+    "app/src/transfer/edition.ts": "9b372bfad3176460b27f89c70c5800457dd124889fefa0b3cf533b372b442ef2",
+    "app/tsconfig.json": "20d4989af22b81ccc2b8b1614351bc6c01b7dafcf4c8a8425f5e8e235aa3bbd3",
+    "app/vite.config.ts": "17034539c76ec403f6e317fe27a2ec14647c7353cf110feb35e922c3186dc7b8"
+  }
+}

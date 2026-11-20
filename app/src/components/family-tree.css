@@ -1,0 +1,296 @@
+.family-tree {
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #dce5eb;
+  border-radius: 16px;
+  background: #f5f7fa;
+  color: #203349;
+}
+
+.tree-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #dce5eb;
+  background: #ffffff;
+}
+
+.tree-depth-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tree-depth-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tree-depth-controls select,
+.tree-center-button,
+.tree-error button {
+  min-height: 44px;
+  border: 1px solid #cbd7df;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #285e73;
+  font: inherit;
+  font-size: 12px;
+  padding: 8px 10px;
+}
+
+.tree-center-button,
+.tree-error button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tree-center-button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.tree-canvas {
+  position: relative;
+  flex: 1 1 400px;
+  height: 400px;
+  min-height: 400px;
+}
+
+.tree-canvas .react-flow {
+  position: absolute;
+  inset: 0;
+}
+
+.tree-person-frame {
+  width: 220px;
+  height: 100px;
+}
+
+.tree-person {
+  pointer-events: auto;
+  box-sizing: border-box;
+  display: flex;
+  width: 220px;
+  height: 100px;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #d7e0e6;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 10px #20334908;
+  color: #203349;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tree-person:hover {
+  border-color: #7297a8;
+}
+
+.tree-person-active {
+  border: 2px solid #285e73;
+  padding: 14px;
+  box-shadow: 0 0 0 4px #285e730c;
+}
+
+.tree-person:focus-visible,
+.family-tree select:focus-visible,
+.family-tree button:focus-visible {
+  outline: 3px solid #b89861;
+  outline-offset: 3px;
+}
+
+.tree-person-initials {
+  flex: 0 0 38px;
+  display: grid;
+  width: 38px;
+  height: 46px;
+  place-items: center;
+  border-radius: 20px 20px 10px 10px;
+  background: #e8eff3;
+  color: #426878;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tree-person-active .tree-person-initials {
+  background: #285e73;
+  color: #ffffff;
+}
+
+.tree-person-details {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tree-person-details strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.tree-person-dates {
+  overflow: hidden;
+  color: #697d8c;
+  font-size: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tree-person-repeat {
+  color: #8b6c37;
+  font-size: 10px;
+}
+
+.tree-person-frame .react-flow__handle {
+  width: 4px;
+  height: 4px;
+  border: 0;
+  background: #9eb4c0;
+}
+
+.tree-canvas .react-flow__controls {
+  border: 1px solid #dce5eb;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px #20334908;
+  overflow: hidden;
+}
+
+.tree-canvas .react-flow__controls-button {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  color: #285e73;
+}
+
+.tree-canvas .react-flow__attribution {
+  font-size: 9px;
+  background: #ffffffcc;
+}
+
+.tree-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 24px;
+  background: #f5f7faed;
+  color: #526b7b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tree-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border-top: 1px solid #dce5eb;
+  font-size: 11px;
+  color: #617787;
+}
+
+.tree-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tree-legend-line {
+  width: 18px;
+  border-top: 2px solid #6b8c9b;
+}
+
+.tree-legend-adoptive {
+  border-top-style: dashed;
+}
+
+.tree-legend-partner {
+  border-top-color: #b89861;
+}
+
+.tree-visible-count {
+  margin-left: auto;
+}
+
+.tree-limit {
+  padding: 0 18px 14px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #617787;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-tree *,
+  .family-tree *::before,
+  .family-tree *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .family-tree {
+    min-height: 540px;
+    border-radius: 12px;
+  }
+
+  .tree-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .tree-depth-controls {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .tree-depth-controls label {
+    flex: 1;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tree-depth-controls select {
+    width: 100%;
+  }
+
+  .tree-center-button {
+    width: 100%;
+  }
+
+  .tree-legend {
+    padding: 12px;
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .tree-visible-count {
+    margin-left: 0;
+  }
+}

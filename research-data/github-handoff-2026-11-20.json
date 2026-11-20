@@ -1,0 +1,2148 @@
+{
+  "checkedOn": "2026-11-20",
+  "timezone": "Europe/Astrakhan",
+  "status": "ready-for-initial-push",
+  "authorization": "Владелец поручил общий коммит и отправку в новый публичный репозиторий своего аккаунта через внутренний браузер",
+  "repository": {
+    "url": "https://github.com/TomashPetersen/rodoslovnaya",
+    "cloneUrl": "https://github.com/TomashPetersen/rodoslovnaya.git",
+    "visibility": "public",
+    "branch": "main",
+    "createdInBrowser": true,
+    "pushNotYetVerified": true
+  },
+  "scope": "Исходное приложение, проектная БЗ, исследование, материалы размещения, инструкции совместной разработки и проверки GitHub",
+  "applicationChecks": {
+    "checkedOn": "2026-11-20",
+    "timezone": "Europe/Astrakhan",
+    "startedAt": "2026-11-20T11:37:25.8086852+04:00",
+    "workingDirectory": "C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app",
+    "environment": {
+      "node": "24.15.0",
+      "browser": "Microsoft Edge",
+      "mobile": "Имитация Pixel 7; настоящее устройство не проверяется",
+      "os": "Windows",
+      "npm": "11.12.1",
+      "browserVersion": "157.0.4341.60"
+    },
+    "temporaryDirectory": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+    "diskBefore": [
+      {
+        "Name": "C",
+        "Free": 2193387520,
+        "Used": 122966724608
+      },
+      {
+        "Name": "D",
+        "Free": 16012308480,
+        "Used": 114217680896
+      }
+    ],
+    "sourceHashesBefore": {
+      "app/playwright.config.ts": "7be58d41e0d766da54550bd11b19d52ceff36787905286a9a3c8716d17ddb9a3",
+      "app/src/transfer/edition.test.ts": "ade82c98169ed6cc0249e7aee93c845885da7bd3b6a55fd08b835ca5516c429c",
+      "app/src/App.tsx": "d3435cf17e43c2454783c0700e2ed4c55b4460e4acfbad9e2ff6126ed2ae9500",
+      "app/src/transfer/archive-client.test.ts": "af52fb94d9339c4e48673f911266d01b63ffbc8138b3587344d9cdc43ae7f79c",
+      "app/src/storage/repository.ts": "9ad6d1aae635062d025750e3317ca3094beef279b134c45e06bee4b63b8700d4",
+      "app/public/icon.svg": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd",
+      "app/tests/mvp.spec.ts": "7c22330f0b3f64bd944b628c7e382d043d5bc8da8bdc15942d32f2fd1cb3a011",
+      "app/src/transfer/archive-client.ts": "d0d7f5d97d6007fdd1b0afefbfd922480891d7771d2dc32920c8fabf5b2d7081",
+      "app/src/domain/capacity.ts": "522ad2bbf1c52d6d1cad1723c24e7a557d8c7c0e02fc4bba8fd9055f9ce532ef",
+      "app/src/main.tsx": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0",
+      "app/public/icon-512.png": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b",
+      "app/src/styles.css": "7dff522bf527158f0bb215d9f86918ac2579d44365a93f5527314d17dbc88b49",
+      "app/src/storage/use-project.test.ts": "52fbefc0faf5b90f3f03de8a242b26289b3c072873542310bd7293657fc1de97",
+      "app/src/components/tree-layout.ts": "aa2e02252308029960b93e4c71679b0e85fa39f08266002bbdba22568548edd0",
+      "app/src/components/tree-layout.test.ts": "fcd66b3fbf507e7ab139b06cf55e39744841590baf692f52e9212e9db17ff6b0",
+      "app/tests/migration.spec.ts": "8ba308613400070e9f19a0efb9a32a45cfc671b745499da65c127e42e230c3c0",
+      "app/src/domain/types.ts": "b07ce3baa13e92f76680e871a22301fbbf992704749b4c380c494fd48b64e7b6",
+      "app/tests/journey.spec.ts": "42ec148cc3bb7b05b7b231d0935406a16a8ec535d2a3fdd1597510ea4da70be0",
+      "app/src/components/EntryForms.tsx": "70beef930a04a0ce9829f2188f925d8c48ac483f31837b1798891a3619e4782b",
+      "app/eslint.config.js": "e0e2c6707a364cbf907d40e54cfd311a18a81c44da1e93805f0f5707fa9466dd",
+      "app/src/storage/use-project.ts": "7f63a8c3c9f0344d90beccb84e6af0a94afdb5738556b32ca7766b7587a197a2",
+      "app/src/components/MaterialsView.tsx": "640c725a344da6ffc6da5a04bcd52837d9d8a096587128fa2197492067abe421",
+      "app/public/icon-192.png": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1",
+      "app/src/media.ts": "6cecac1374b54c073bde66df06a4a6e509d6e49b2eb6cea43c9dee5496fae755",
+      "app/src/storage/repository-mvp.test.ts": "fcad2a567369787f4f99974ddc9917aecdcd4412a67d7c017743c0c8d3d9b3eb",
+      "app/src/components/FamilyTree.tsx": "2c42045294b8c9762e9d9d5dc783d1d74068e555ae473bf9f7e98753153e3e0c",
+      "app/tsconfig.json": "20d4989af22b81ccc2b8b1614351bc6c01b7dafcf4c8a8425f5e8e235aa3bbd3",
+      "app/src/components/PersonEditor.tsx": "10aa061848994eec0aac7efaab837cda5c553aabd1cc655484dd6c7c5c2336b4",
+      "app/tests/volume.spec.ts": "85e84e3ae0e50d66ac7e4a7d107643feca97b1f67ca3e96e7260193a26844f03",
+      "app/package.json": "adab51aa2d7df726d19fc96556c4524ed076ae23463fdf53260c9fd248a9594f",
+      "app/src/transfer/archive.test.ts": "9345ca304b921a2c940b1597e81ebbf2f60bf473744289cd7dd7d5e1fe98f7f6",
+      "app/src/components/ArchiveView.tsx": "2cf893a1dd8e1d2d27900ac96caadc481b0f674d68e061e48ad31a4de06bde8b",
+      "app/vite.config.ts": "17034539c76ec403f6e317fe27a2ec14647c7353cf110feb35e922c3186dc7b8",
+      "app/src/components/editor-common.tsx": "54eb4e46113dc63affd2db0f6f542c3251d0dd3da6c2dcd8b48dd2e63859f219",
+      "app/src/domain/capacity.test.ts": "14c629fcf82821a330571bb0a4482a66150d93db868ae782bef5b8a159745b2e",
+      "app/public/apple-touch-icon.png": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340",
+      "app/src/transfer/archive.ts": "1a7dabca3bd20aaf8ae694a63f7c6739bc6de019955298bebb6a37c9291bfc64",
+      "app/src/storage/repository.test.ts": "409589874779ed6fdc84400f56e0407b77fe4eb5a3d2a8a212e7f033470ec673",
+      "app/src/components/family-tree.css": "3c7ccf48770f9bac10658766824fe2c0091c157c94124d20cdf1d9ea5ab0e1ee",
+      "app/src/transfer/archive.worker.ts": "64f8452ee45c9245ba07488cbef4c1c40c73bb98b671c57c7c2bea0b12a92878",
+      "app/tests/recovery.spec.ts": "2859b671d72003bd10051647bbd04de63669120d6b085d3fb8e24067099445a6",
+      "app/tests/timing.spec.ts": "61c3c73a5f907d00bcb2e82b4c5403e413a7777e306a9fe02389e66fa3cacc23",
+      "app/README.md": "47e30a991f386f796ea79a9c2ec34d9a8d3a6e7099700f87b6f8b1d678dc52e5",
+      "app/src/domain/model.test.ts": "7a43b3ca21fe4c19831b2c745492cc785161e5af561c5a290e2ff2e585ca3c44",
+      "app/src/domain/model.ts": "477b5243e0c1d1ccba886439215028aa7cba80aced1a7db3454acb6c869132da",
+      "app/package-lock.json": "35d5b8fb8d5a868a368e381f87c4440a077d8068ecce11dc6076e11658f9245a",
+      "app/src/transfer/edition.ts": "9b372bfad3176460b27f89c70c5800457dd124889fefa0b3cf533b372b442ef2",
+      "app/index.html": "9aa8a2bc8db272788480b167e0987be3537727eb1de3384acd0eef956cab1f89",
+      "app/src/storage/editor-lock.ts": "a6f3d94d2bea903b1a99d7b7894124998900140b76d1d1c40017144465b9cb71"
+    },
+    "completed": 8,
+    "total": 8,
+    "checks": [
+      {
+        "command": "npm.cmd run format:check",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:37:26.3510785+04:00",
+        "finishedAt": "2026-11-20T11:37:38.266145+04:00",
+        "name": "format",
+        "log": "output/github-handoff-20261120/checks/format.log",
+        "durationMs": 11915,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run lint",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:37:38.3231503+04:00",
+        "finishedAt": "2026-11-20T11:38:10.0330691+04:00",
+        "name": "lint",
+        "log": "output/github-handoff-20261120/checks/lint.log",
+        "durationMs": 31710,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run typecheck",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:38:10.0622406+04:00",
+        "finishedAt": "2026-11-20T11:38:25.520974+04:00",
+        "name": "typecheck",
+        "log": "output/github-handoff-20261120/checks/typecheck.log",
+        "durationMs": 15459,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd test",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:38:25.5369693+04:00",
+        "finishedAt": "2026-11-20T11:38:35.6414223+04:00",
+        "name": "unit",
+        "log": "output/github-handoff-20261120/checks/unit.log",
+        "durationMs": 10104,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run build",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:38:35.6452561+04:00",
+        "finishedAt": "2026-11-20T11:39:05.5019558+04:00",
+        "name": "build",
+        "log": "output/github-handoff-20261120/checks/build.log",
+        "durationMs": 29857,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run test:browser -- --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-artifacts",
+        "exitCode": 1,
+        "startedAt": "2026-11-20T11:39:05.5065283+04:00",
+        "finishedAt": "2026-11-20T11:42:47.2160366+04:00",
+        "name": "browser",
+        "log": "output/github-handoff-20261120/checks/browser.log",
+        "durationMs": 221710,
+        "status": "failed"
+      },
+      {
+        "command": "npm.cmd audit --omit=dev --json",
+        "exitCode": 0,
+        "startedAt": "2026-11-20T11:42:47.2388005+04:00",
+        "finishedAt": "2026-11-20T11:42:50.2908976+04:00",
+        "name": "audit-production",
+        "log": "output/github-handoff-20261120/checks/audit-production.log",
+        "durationMs": 3052,
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd audit --json",
+        "exitCode": 1,
+        "startedAt": "2026-11-20T11:42:50.2972095+04:00",
+        "finishedAt": "2026-11-20T11:44:06.6328747+04:00",
+        "name": "audit-all",
+        "log": "output/github-handoff-20261120/checks/audit-all.log",
+        "durationMs": 76336,
+        "status": "failed"
+      }
+    ],
+    "updatedAt": "2026-11-20T12:10:49.2378089+04:00",
+    "summary": {
+      "unit": {
+        "passed": 130,
+        "files": 9
+      },
+      "browser": {
+        "stats": {
+          "startTime": "2026-11-20T07:39:07.457Z",
+          "duration": 219710.299,
+          "expected": 35,
+          "skipped": 2,
+          "unexpected": 1,
+          "flaky": 0
+        },
+        "failures": [
+          {
+            "title": "ошибка рассказа оставляет аварийную копию доступной прямо из формы",
+            "file": "recovery.spec.ts",
+            "line": 12,
+            "project": "mobile-chromium",
+            "status": "failed",
+            "durationMs": 0,
+            "error": "Error: worker process exited unexpectedly (code=134, signal=null)",
+            "stderr": "\r\n<--- Last few GCs --->\r\nt [13564:000002062A49A000]    47009 ms: Mark-Compact 68.6 (192.0) -> 50.7 (185.4) MB, pooled: 50 MB, 22.16 / 0.77 ms  (+ 0.3 ms in 10 steps since start of marking, biggest step 0.1 ms, walltime since start of marking 70 ms) (average mu = 0.960, current mu =[13564:000002062A49A000]    47740 ms: Mark-Compact 64.7 (187.0) -> 50.9 (186.2) MB, pooled: 50 MB, 30.73 / 0.03 ms  (+ 4.9 ms in 6 steps since start of marking, biggest step 4.9 ms, walltime since start of marking 112 ms) (average mu = 0.959, current mu =\r\nFATAL ERROR: Zone Allocation failed - process out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7E00C403F \r\n 2: 00007FF7E0D0FAA7 \r\n 3: 00007FF7E0689986 \r\n 4: 00007FF7E0CF6AC6 \r\n 5: 00007FF7E07D8CD5 \r\n 6: 00007FF7E07D5288 \r\n 7: 00007FF7E07D6FBB \r\n 8: 00007FF7E07C4DEB \r\n 9: 00007FF7E07C42EA \r\n10: 00007FF7E07B79E7 \r\n11: 00007FF7E07B91CE \r\n12: 00007FF7E07B875A \r\n13: 00007FF7E07B13FE \r\n14: 00007FF7E0C8A920 \r\n15: 00007FF7E0C8B41C \r\n16: 00007FF7E070DA4B \r\n17: 0000020662BB75FA \r\n",
+            "measurements": []
+          }
+        ],
+        "searches": [
+          {
+            "title": "поиск по тысяче людей возвращает нужную карточку",
+            "file": "volume.spec.ts",
+            "line": 106,
+            "project": "chromium",
+            "status": "passed",
+            "durationMs": 10758,
+            "stderr": "",
+            "measurements": [
+              {
+                "name": "Время поиска",
+                "values": {
+                  "measurementsMs": [163, 163, 156, 159, 153],
+                  "medianMs": 159,
+                  "worstMs": 163
+                }
+              }
+            ]
+          },
+          {
+            "title": "поиск по тысяче людей возвращает нужную карточку",
+            "file": "volume.spec.ts",
+            "line": 106,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 2757,
+            "stderr": "",
+            "measurements": [
+              {
+                "name": "Время поиска",
+                "values": {
+                  "measurementsMs": [152, 156, 157, 150, 154],
+                  "medianMs": 154,
+                  "worstMs": 157
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "productionAudit": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "allAudit": {
+        "info": 0,
+        "low": 0,
+        "moderate": 10,
+        "high": 0,
+        "critical": 0,
+        "total": 10
+      },
+      "browserRecoveryRetry": {
+        "stats": {
+          "startTime": "2026-11-20T07:52:43.215Z",
+          "duration": 55228.488000000005,
+          "expected": 0,
+          "skipped": 0,
+          "unexpected": 1,
+          "flaky": 0
+        },
+        "failures": [
+          {
+            "title": "ошибка рассказа оставляет аварийную копию доступной прямо из формы",
+            "file": "recovery.spec.ts",
+            "line": 12,
+            "project": "mobile-chromium",
+            "status": "timedOut",
+            "durationMs": 41129,
+            "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+            "errors": [
+              {
+                "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+              },
+              {
+                "location": {
+                  "file": "C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app\\tests\\recovery.spec.ts",
+                  "column": 82,
+                  "line": 8
+                },
+                "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Начать семейный архив', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"primary\">Начать семейный архив</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n   6 |   await page.goto('/');\n   7 |   await page.getByLabel('Имя первого человека').fill('Анна Семейная');\n>  8 |   await page.getByRole('button', { name: 'Начать семейный архив', exact: true }).click();\n     |                                                                                  ^\n   9 |   await expect(page.getByRole('heading', { name: 'Анна Семейная', exact: true })).toBeVisible();\n  10 | }\n  11 |\n    at start (C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app\\tests\\recovery.spec.ts:8:82)\n    at C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app\\tests\\recovery.spec.ts:15:3"
+              }
+            ],
+            "stderr": "",
+            "measurements": []
+          }
+        ],
+        "searches": [],
+        "traceObservations": {
+          "pageError": "Failed to load resource: net::ERR_INSUFFICIENT_RESOURCES",
+          "resource": "/icon.svg",
+          "lastRecordedFrame": "Пустая страница",
+          "screenshot": "output/github-handoff-20261120/checks/recovery-retry-last-frame.jpeg",
+          "rootCauseEstablished": false
+        }
+      },
+      "browserProjectsWithFreshServer": {
+        "chromium": {
+          "stats": {
+            "startTime": "2026-11-20T07:56:30.247Z",
+            "duration": 238973.257,
+            "expected": 18,
+            "skipped": 1,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "failures": [],
+          "searches": [
+            {
+              "title": "поиск по тысяче людей возвращает нужную карточку",
+              "file": "volume.spec.ts",
+              "line": 106,
+              "project": "chromium",
+              "status": "passed",
+              "durationMs": 3424,
+              "errors": [],
+              "stderr": "",
+              "measurements": [
+                {
+                  "name": "Время поиска",
+                  "values": {
+                    "measurementsMs": [174, 155, 164, 177, 217],
+                    "medianMs": 174,
+                    "worstMs": 217
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "mobileChromium": {
+          "stats": {
+            "startTime": "2026-11-20T08:01:44.563Z",
+            "duration": 157257.981,
+            "expected": 16,
+            "skipped": 1,
+            "unexpected": 2,
+            "flaky": 0
+          },
+          "failures": [
+            {
+              "title": "возврат от другого узла восстанавливает корень и положение дерева",
+              "file": "recovery.spec.ts",
+              "line": 76,
+              "project": "mobile-chromium",
+              "status": "failed",
+              "durationMs": 0,
+              "error": "Error: worker process exited unexpectedly (code=134, signal=null)",
+              "errors": [
+                {
+                  "message": "Error: worker process exited unexpectedly (code=134, signal=null)"
+                }
+              ],
+              "stderr": "\r\n<--- Last few GCs --->\r\nng, biggest step 5.6 ms, walltime since start of marking 63 ms) (average mu = 0.995, current mu =[23188:000001D5342E8000]    55022 ms: Mark-Compact 94.6 (195.7) -> 51.0 (186.2) MB, pooled: 51 MB, 33.23 / 2.23 ms  (+ 46.7 ms in 63 steps since start of marking, biggest step 15.8 ms, walltime since start of marking 116 ms) (average mu = 0.989, current m[23188:000001D5342E8000]    58187 ms: Scavenge 114.7 (197.4) -> 54.6 (187.7) MB, pooled: 51 MB, 9.34 / 0.09 ms  (average mu = 0.989, current mu = 0.968) task; \r\n\r\nFATAL ERROR: Zone Allocation failed - process out of memory\r\n----- Native stack trace -----\r\n\r\n 1: 00007FF7E00C403F \r\n 2: 00007FF7E0D0FAA7 \r\n 3: 00007FF7E0689986 \r\n 4: 00007FF7E04B3221 \r\n 5: 00007FF7E04B31E9 \r\n 6: 00007FF7E04B30E3 \r\n 7: 00007FF7E04B3836 \r\n 8: 00007FF7E04ADD74 \r\n 9: 00007FF7E04B5E2E \r\n10: 00007FF7E04B5A80 \r\n11: 00007FF7E051A344 \r\n12: 00007FF7E0519F32 \r\n13: 00007FF7E0517DEB \r\n14: 00007FF7E0515907 \r\n15: 00007FF7E0513F93 \r\n16: 00007FF7E0513D7B \r\n17: 00007FF7E04EAB98 \r\n18: 00007FF7E0562C76 \r\n19: 00007FF7E0561990 \r\n20: 00007FF7E055F78A \r\n21: 00007FF7E0C8376F \r\n22: 00007FF7E056126B \r\n23: 00007FF7E14F0C5F \r\n24: 00007FF7E0012E0E \r\n25: 00007FF7E0D64A36 \r\n26: 00007FF7E1FC5A73 \r\n27: 00007FFAD6A6DDA7 BaseThreadInitThunk+23\r\n28: 00007FFAD8B39C5C RtlUserThreadStart+44\r\n",
+              "measurements": []
+            },
+            {
+              "title": "возврат из списка восстанавливает камеру, а новая карточка не использует старую историю",
+              "file": "recovery.spec.ts",
+              "line": 106,
+              "project": "mobile-chromium",
+              "status": "timedOut",
+              "durationMs": 40801,
+              "error": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+              "errors": [
+                {
+                  "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                },
+                {
+                  "location": {
+                    "file": "C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app\\tests\\recovery.spec.ts",
+                    "column": 90,
+                    "line": 116
+                  },
+                  "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: 'Сохранить', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"primary\">Сохранить</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n  114 |   await page.getByRole('button', { name: 'Добавить родственника', exact: true }).click();\n  115 |   await page.getByRole('dialog').getByLabel('Имя родственника').fill('Борис Родитель');\n> 116 |   await page.getByRole('dialog').getByRole('button', { name: 'Сохранить', exact: true }).click();\n      |                                                                                          ^\n  117 |   await page.getByRole('button', { name: 'Люди', exact: true }).click();\n  118 |   await page.getByRole('button', { name: /Анна Семейная/ }).click();\n  119 |   await page.getByRole('button', { name: 'Дерево', exact: true }).click();\n    at C:\\Users\\Denis\\Documents\\ChatGPT\\Приложение Родословная\\app\\tests\\recovery.spec.ts:116:90"
+                }
+              ],
+              "stderr": "",
+              "measurements": []
+            }
+          ],
+          "searches": [
+            {
+              "title": "поиск по тысяче людей возвращает нужную карточку",
+              "file": "volume.spec.ts",
+              "line": 106,
+              "project": "mobile-chromium",
+              "status": "passed",
+              "durationMs": 3515,
+              "errors": [],
+              "stderr": "",
+              "measurements": [
+                {
+                  "name": "Время поиска",
+                  "values": {
+                    "measurementsMs": [185, 164, 155, 187, 217],
+                    "medianMs": 185,
+                    "worstMs": 217
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "successfulCompleteBrowserCoverage": true,
+      "browserMobileIsolated": {
+        "method": "Полный мобильный набор по шести файлам в последовательных новых процессах",
+        "environment": {
+          "CI": "1",
+          "timeout": 30000
+        },
+        "expectedCount": 19,
+        "observedCount": 19,
+        "missingTests": [],
+        "extraTests": [],
+        "fullCoverage": true,
+        "passed": true,
+        "stats": {
+          "expected": 18,
+          "skipped": 1,
+          "unexpected": 0,
+          "flaky": 0,
+          "duration": 134064.692
+        },
+        "runs": [
+          {
+            "file": "tests/journey.spec.ts",
+            "name": "browser-mobile-isolated-journey",
+            "stats": {
+              "startTime": "2026-11-20T08:08:20.883Z",
+              "duration": 45600.865000000005,
+              "expected": 6,
+              "skipped": 0,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          },
+          {
+            "file": "tests/migration.spec.ts",
+            "name": "browser-mobile-isolated-migration",
+            "stats": {
+              "startTime": "2026-11-20T08:09:08.987Z",
+              "duration": 5379.182,
+              "expected": 1,
+              "skipped": 0,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          },
+          {
+            "file": "tests/mvp.spec.ts",
+            "name": "browser-mobile-isolated-mvp",
+            "stats": {
+              "startTime": "2026-11-20T08:09:17.022Z",
+              "duration": 21850.665,
+              "expected": 5,
+              "skipped": 0,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          },
+          {
+            "file": "tests/recovery.spec.ts",
+            "name": "browser-mobile-isolated-recovery",
+            "stats": {
+              "startTime": "2026-11-20T08:09:41.355Z",
+              "duration": 26420.157,
+              "expected": 4,
+              "skipped": 0,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          },
+          {
+            "file": "tests/timing.spec.ts",
+            "name": "browser-mobile-isolated-timing",
+            "stats": {
+              "startTime": "2026-11-20T08:10:11.923Z",
+              "duration": 24893.16,
+              "expected": 1,
+              "skipped": 0,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          },
+          {
+            "file": "tests/volume.spec.ts",
+            "name": "browser-mobile-isolated-volume",
+            "stats": {
+              "startTime": "2026-11-20T08:10:39.222Z",
+              "duration": 9920.663,
+              "expected": 1,
+              "skipped": 1,
+              "unexpected": 0,
+              "flaky": 0
+            },
+            "failures": []
+          }
+        ],
+        "tests": [
+          {
+            "title": "семья, фотография, рассказ, архив и независимое восстановление",
+            "file": "journey.spec.ts",
+            "line": 27,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 17217,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "смена статуса на живого требует нового явного включения в выпуск",
+            "file": "journey.spec.ts",
+            "line": 110,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 4916,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "выпуск перекодирует импортированное изображение и удаляет скрытые метаданные",
+            "file": "journey.spec.ts",
+            "line": 132,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 3093,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "сохраненная карточка доступна после запуска без сети",
+            "file": "journey.spec.ts",
+            "line": 184,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 4337,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "второе окно читает архив и получает право записи после закрытия первого",
+            "file": "journey.spec.ts",
+            "line": 210,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 4361,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "второе окно обнаруживает архив, созданный после его открытия",
+            "file": "journey.spec.ts",
+            "line": 239,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 2191,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "старая блокировка удерживает миграцию до сохранения и закрытия прежнего окна",
+            "file": "migration.spec.ts",
+            "line": 5,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 1295,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "возврат ошибочного поля сохраняет другие сведения",
+            "file": "mvp.spec.ts",
+            "line": 19,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 3346,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "неверный черновик требует явного решения перед переходом",
+            "file": "mvp.spec.ts",
+            "line": 40,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 2321,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "корзина доступна после удаления последнего человека и перезапуска",
+            "file": "mvp.spec.ts",
+            "line": 51,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 2388,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "постоянный отказ записи не блокирует копирование сохраненного снимка",
+            "file": "mvp.spec.ts",
+            "line": 65,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 3758,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "основные экраны помещаются на телефоне и сохраняют положение дерева",
+            "file": "mvp.spec.ts",
+            "line": 100,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 4492,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "ошибка рассказа оставляет аварийную копию доступной прямо из формы",
+            "file": "recovery.spec.ts",
+            "line": 12,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 4458,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "изменение версии базы прекращает запись, сохраняя доступный незавершенный ввод",
+            "file": "recovery.spec.ts",
+            "line": 43,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 2730,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "возврат от другого узла восстанавливает корень и положение дерева",
+            "file": "recovery.spec.ts",
+            "line": 76,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 5187,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "возврат из списка восстанавливает камеру, а новая карточка не использует старую историю",
+            "file": "recovery.spec.ts",
+            "line": 106,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 6014,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "пять автономных запусков, размещений 80 карточек и открытий человека",
+            "file": "timing.spec.ts",
+            "line": 7,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 16822,
+            "errors": [],
+            "stderr": "",
+            "measurements": [
+              {
+                "name": "Быстродействие без сети",
+                "values": {
+                  "launchMs": [1923, 1593, 2101, 1469, 1484],
+                  "treeMs": [974, 929, 1510, 902, 945],
+                  "cardMs": [169, 160, 152, 164, 137],
+                  "heapBytes": [
+                    12660970, 38336057, 50729809, 42252904, 21941936
+                  ],
+                  "memoryScope": "Только куча JavaScript, не вся память процесса и файлов"
+                }
+              }
+            ]
+          },
+          {
+            "title": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+            "file": "volume.spec.ts",
+            "line": 10,
+            "project": "mobile-chromium",
+            "status": "skipped",
+            "durationMs": 704,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          },
+          {
+            "title": "поиск по тысяче людей возвращает нужную карточку",
+            "file": "volume.spec.ts",
+            "line": 106,
+            "project": "mobile-chromium",
+            "status": "passed",
+            "durationMs": 3978,
+            "errors": [],
+            "stderr": "",
+            "measurements": [
+              {
+                "name": "Время поиска",
+                "values": {
+                  "measurementsMs": [186, 188, 197, 179, 286],
+                  "medianMs": 188,
+                  "worstMs": 286
+                }
+              }
+            ]
+          }
+        ],
+        "skipped": [
+          {
+            "title": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+            "file": "volume.spec.ts",
+            "line": 10,
+            "project": "mobile-chromium",
+            "status": "skipped",
+            "durationMs": 704,
+            "errors": [],
+            "stderr": "",
+            "measurements": []
+          }
+        ]
+      },
+      "successfulBrowserCoverageMethod": "chromium: один полный проект с CI=1; mobile-chromium: полный набор по шести файлам, каждый в новом процессе с CI=1. Исходные неуспешные запуски сохранены.",
+      "acceptedBrowserCoverage": {
+        "expected": 36,
+        "skipped": 2,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "fullAuditPassed": false,
+      "runnerReliabilityLimitation": "Первый общий прогон и один полный мобильный повтор имели ошибки выделения памяти Node; узкий повтор также встретил ERR_INSUFFICIENT_RESOURCES и тайм-аут. Причина не установлена. Последующая серия с отдельным процессом на файл прошла полностью; это не доказывает устранение первопричины."
+    },
+    "relatedFiles": [
+      "output/github-handoff-20261120/checks/browser-report.json",
+      "output/github-handoff-20261120/checks/browser-summary.json",
+      "output/github-handoff-20261120/checks/audit-summary.json",
+      "output/github-handoff-20261120/checks/audit-assessment.json"
+    ],
+    "environmentObservations": [
+      {
+        "observation": "Во время первого прогона обнаружен отдельный Playwright другого проекта.",
+        "pid": 8040,
+        "observedCausalImpact": false
+      },
+      {
+        "observation": "Перед повтором обнаружен новый Playwright другого проекта; повтор отложен до его завершения.",
+        "pid": 26476,
+        "createdAt": "2026-11-20T11:44:10+04:00",
+        "observedCausalImpact": false
+      },
+      {
+        "observation": "Аварийный процесс Node сообщил об ошибке выделения памяти Zone Allocation failed; причина исчерпания памяти не установлена.",
+        "failedWorkerExitCode": 134
+      }
+    ],
+    "additionalChecks": [
+      {
+        "durationMs": 7271,
+        "status": "passed",
+        "finishedAt": "2026-11-20T11:50:36.8020421+04:00",
+        "name": "format-final",
+        "exitCode": 0,
+        "command": "npm.cmd run format:check",
+        "log": "output/github-handoff-20261120/checks/format-final.log",
+        "startedAt": "2026-11-20T11:50:29.5313556+04:00"
+      },
+      {
+        "durationMs": 61310,
+        "memoryBefore": {
+          "FreePhysicalMemory": 2216760,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 2111080,
+          "TotalVirtualMemorySize": 20406664
+        },
+        "log": "output/github-handoff-20261120/checks/browser-recovery-retry.log",
+        "startedAt": "2026-11-20T11:52:37.738661+04:00",
+        "command": "npm.cmd run test:browser -- tests/recovery.spec.ts --project=mobile-chromium --grep=\"ошибка рассказа оставляет аварийную копию доступной прямо из формы\" --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-recovery-retry-artifacts",
+        "name": "browser-recovery-retry",
+        "memoryAfter": {
+          "FreePhysicalMemory": 5919140,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 5031536,
+          "TotalVirtualMemorySize": 18797780
+        },
+        "exitCode": 1,
+        "finishedAt": "2026-11-20T11:53:39.0482922+04:00",
+        "status": "failed"
+      },
+      {
+        "command": "npm.cmd run test:browser -- --project=chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-chromium-ci-artifacts",
+        "durationMs": 240922,
+        "project": "chromium",
+        "startedAt": "2026-11-20T11:56:28.4041146+04:00",
+        "exitCode": 0,
+        "name": "browser-chromium-ci",
+        "status": "passed",
+        "memoryBefore": {
+          "FreePhysicalMemory": 6317700,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 5470748,
+          "TotalVirtualMemorySize": 18797780
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 3535840,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3552420,
+          "TotalVirtualMemorySize": 20399628
+        },
+        "environment": {
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1",
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120"
+        },
+        "log": "output/github-handoff-20261120/checks/browser-chromium-ci.log",
+        "finishedAt": "2026-11-20T12:00:29.3259505+04:00"
+      },
+      {
+        "status": "failed",
+        "project": "mobile-chromium",
+        "operationalMinimumFreeVirtualKiB": 3145728,
+        "startedAt": "2026-11-20T12:01:42.9309196+04:00",
+        "durationMs": 158967,
+        "command": "npm.cmd run test:browser -- --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-chromium-ci-artifacts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 4873796,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3928432,
+          "TotalVirtualMemorySize": 18949504
+        },
+        "name": "browser-mobile-chromium-ci",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-chromium-ci.log",
+        "finishedAt": "2026-11-20T12:04:21.8982771+04:00",
+        "environment": {
+          "CI": "1",
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120"
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 4934068,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 4014672,
+          "TotalVirtualMemorySize": 19141332
+        },
+        "exitCode": 1
+      },
+      {
+        "durationMs": 47656,
+        "testFile": "tests/journey.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 4088720,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 2932096,
+          "TotalVirtualMemorySize": 18986816
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 4146328,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3754300,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:08:18.9652061+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-journey.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/journey.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-journey-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-journey",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:09:06.6211884+04:00"
+      },
+      {
+        "durationMs": 7406,
+        "testFile": "tests/migration.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 4122888,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3737044,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 4297004,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3909984,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:09:07.0245361+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-migration.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/migration.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-migration-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-migration",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:09:14.4300743+04:00"
+      },
+      {
+        "durationMs": 24193,
+        "testFile": "tests/mvp.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 4302940,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3800480,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 4224720,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3829512,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:09:14.7595316+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-mvp.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/mvp.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-mvp-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-mvp",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:09:38.9524249+04:00"
+      },
+      {
+        "durationMs": 28721,
+        "testFile": "tests/recovery.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 4232704,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3813024,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 3931176,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3023420,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:09:39.2412377+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-recovery.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/recovery.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-recovery-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-recovery",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:10:07.961949+04:00"
+      },
+      {
+        "durationMs": 28443,
+        "testFile": "tests/timing.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 3920416,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3009972,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 3504208,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 2629480,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:10:08.4330787+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-timing.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/timing.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-timing-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-timing",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:10:36.8758388+04:00"
+      },
+      {
+        "durationMs": 12084,
+        "testFile": "tests/volume.spec.ts",
+        "memoryBefore": {
+          "FreePhysicalMemory": 3496592,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 2628972,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "memoryAfter": {
+          "FreePhysicalMemory": 4227152,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3819220,
+          "TotalVirtualMemorySize": 20041696
+        },
+        "status": "passed",
+        "startedAt": "2026-11-20T12:10:37.1537853+04:00",
+        "log": "output/github-handoff-20261120/checks/browser-mobile-isolated-volume.log",
+        "environment": {
+          "TMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "TEMP": "D:\\CodexTemp\\rodoslovnaya-github-20261120",
+          "CI": "1"
+        },
+        "operationalMinimumFreeVirtualKiB": 1572864,
+        "command": "npm.cmd run test:browser -- tests/volume.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/github-handoff-20261120/checks/browser-mobile-isolated-volume-artifacts",
+        "project": "mobile-chromium",
+        "name": "browser-mobile-isolated-volume",
+        "exitCode": 0,
+        "finishedAt": "2026-11-20T12:10:49.2378089+04:00"
+      }
+    ],
+    "pendingBrowserCheck": null,
+    "memoryGate": {
+      "state": {
+        "FreePhysicalMemory": 3991076,
+        "TotalVisibleMemorySize": 16119352,
+        "FreeVirtualMemory": 2881328,
+        "TotalVirtualMemorySize": 18986816
+      },
+      "checkedAt": "2026-11-20T12:07:05.5103543+04:00",
+      "minimumFreeVirtualKiB": 3145728
+    },
+    "memoryGateHistory": [
+      {
+        "minimumFreeVirtualKiB": 4194304,
+        "checkedAt": "2026-11-20T12:00:29.9899185+04:00",
+        "state": {
+          "FreePhysicalMemory": 3521936,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3534608,
+          "TotalVirtualMemorySize": 20399628
+        }
+      },
+      {
+        "minimumFreeVirtualKiB": 3145728,
+        "checkedAt": "2026-11-20T12:01:42.8991883+04:00",
+        "reason": "Операционный порог снижен до 3 ГиБ для мобильного проекта по поручению основного агента: сценарий 100 МБ в нем намеренно пропущен. Код и пороги испытаний не менялись.",
+        "state": {
+          "FreePhysicalMemory": 4873796,
+          "TotalVisibleMemorySize": 16119352,
+          "FreeVirtualMemory": 3928432,
+          "TotalVirtualMemorySize": 18949504
+        }
+      },
+      {
+        "recordedAt": "2026-11-20T12:08:18.6742622+04:00",
+        "reason": "По поручению основного агента операционный порог снижен до 1,5 ГиБ для отдельного файла мобильных сценариев. Код, состав, параметры и пороги испытаний не менялись.",
+        "minimumFreeVirtualKiB": 1572864
+      }
+    ],
+    "sourceHashesAfter": {
+      "app/playwright.config.ts": "7be58d41e0d766da54550bd11b19d52ceff36787905286a9a3c8716d17ddb9a3",
+      "app/src/transfer/edition.test.ts": "ade82c98169ed6cc0249e7aee93c845885da7bd3b6a55fd08b835ca5516c429c",
+      "app/src/App.tsx": "d3435cf17e43c2454783c0700e2ed4c55b4460e4acfbad9e2ff6126ed2ae9500",
+      "app/src/transfer/archive-client.test.ts": "af52fb94d9339c4e48673f911266d01b63ffbc8138b3587344d9cdc43ae7f79c",
+      "app/src/storage/repository.ts": "9ad6d1aae635062d025750e3317ca3094beef279b134c45e06bee4b63b8700d4",
+      "app/public/icon.svg": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd",
+      "app/tests/mvp.spec.ts": "7c22330f0b3f64bd944b628c7e382d043d5bc8da8bdc15942d32f2fd1cb3a011",
+      "app/src/transfer/archive-client.ts": "d0d7f5d97d6007fdd1b0afefbfd922480891d7771d2dc32920c8fabf5b2d7081",
+      "app/src/domain/capacity.ts": "522ad2bbf1c52d6d1cad1723c24e7a557d8c7c0e02fc4bba8fd9055f9ce532ef",
+      "app/src/main.tsx": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0",
+      "app/public/icon-512.png": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b",
+      "app/src/styles.css": "7dff522bf527158f0bb215d9f86918ac2579d44365a93f5527314d17dbc88b49",
+      "app/src/storage/use-project.test.ts": "52fbefc0faf5b90f3f03de8a242b26289b3c072873542310bd7293657fc1de97",
+      "app/src/components/tree-layout.ts": "aa2e02252308029960b93e4c71679b0e85fa39f08266002bbdba22568548edd0",
+      "app/src/components/tree-layout.test.ts": "fcd66b3fbf507e7ab139b06cf55e39744841590baf692f52e9212e9db17ff6b0",
+      "app/tests/migration.spec.ts": "8ba308613400070e9f19a0efb9a32a45cfc671b745499da65c127e42e230c3c0",
+      "app/src/domain/types.ts": "b07ce3baa13e92f76680e871a22301fbbf992704749b4c380c494fd48b64e7b6",
+      "app/tests/journey.spec.ts": "42ec148cc3bb7b05b7b231d0935406a16a8ec535d2a3fdd1597510ea4da70be0",
+      "app/src/components/EntryForms.tsx": "70beef930a04a0ce9829f2188f925d8c48ac483f31837b1798891a3619e4782b",
+      "app/eslint.config.js": "e0e2c6707a364cbf907d40e54cfd311a18a81c44da1e93805f0f5707fa9466dd",
+      "app/src/storage/use-project.ts": "7f63a8c3c9f0344d90beccb84e6af0a94afdb5738556b32ca7766b7587a197a2",
+      "app/src/components/MaterialsView.tsx": "640c725a344da6ffc6da5a04bcd52837d9d8a096587128fa2197492067abe421",
+      "app/public/icon-192.png": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1",
+      "app/src/media.ts": "6cecac1374b54c073bde66df06a4a6e509d6e49b2eb6cea43c9dee5496fae755",
+      "app/src/storage/repository-mvp.test.ts": "fcad2a567369787f4f99974ddc9917aecdcd4412a67d7c017743c0c8d3d9b3eb",
+      "app/src/components/FamilyTree.tsx": "2c42045294b8c9762e9d9d5dc783d1d74068e555ae473bf9f7e98753153e3e0c",
+      "app/tsconfig.json": "20d4989af22b81ccc2b8b1614351bc6c01b7dafcf4c8a8425f5e8e235aa3bbd3",
+      "app/src/components/PersonEditor.tsx": "10aa061848994eec0aac7efaab837cda5c553aabd1cc655484dd6c7c5c2336b4",
+      "app/tests/volume.spec.ts": "85e84e3ae0e50d66ac7e4a7d107643feca97b1f67ca3e96e7260193a26844f03",
+      "app/package.json": "adab51aa2d7df726d19fc96556c4524ed076ae23463fdf53260c9fd248a9594f",
+      "app/src/transfer/archive.test.ts": "9345ca304b921a2c940b1597e81ebbf2f60bf473744289cd7dd7d5e1fe98f7f6",
+      "app/src/components/ArchiveView.tsx": "2cf893a1dd8e1d2d27900ac96caadc481b0f674d68e061e48ad31a4de06bde8b",
+      "app/vite.config.ts": "17034539c76ec403f6e317fe27a2ec14647c7353cf110feb35e922c3186dc7b8",
+      "app/src/components/editor-common.tsx": "54eb4e46113dc63affd2db0f6f542c3251d0dd3da6c2dcd8b48dd2e63859f219",
+      "app/src/domain/capacity.test.ts": "14c629fcf82821a330571bb0a4482a66150d93db868ae782bef5b8a159745b2e",
+      "app/public/apple-touch-icon.png": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340",
+      "app/src/transfer/archive.ts": "1a7dabca3bd20aaf8ae694a63f7c6739bc6de019955298bebb6a37c9291bfc64",
+      "app/src/storage/repository.test.ts": "409589874779ed6fdc84400f56e0407b77fe4eb5a3d2a8a212e7f033470ec673",
+      "app/src/components/family-tree.css": "3c7ccf48770f9bac10658766824fe2c0091c157c94124d20cdf1d9ea5ab0e1ee",
+      "app/src/transfer/archive.worker.ts": "64f8452ee45c9245ba07488cbef4c1c40c73bb98b671c57c7c2bea0b12a92878",
+      "app/tests/recovery.spec.ts": "2859b671d72003bd10051647bbd04de63669120d6b085d3fb8e24067099445a6",
+      "app/tests/timing.spec.ts": "61c3c73a5f907d00bcb2e82b4c5403e413a7777e306a9fe02389e66fa3cacc23",
+      "app/README.md": "5960896cff9e74a3d8735b5452d982e0d51233438cfab5fe621caf023b832814",
+      "app/src/domain/model.test.ts": "7a43b3ca21fe4c19831b2c745492cc785161e5af561c5a290e2ff2e585ca3c44",
+      "app/src/domain/model.ts": "477b5243e0c1d1ccba886439215028aa7cba80aced1a7db3454acb6c869132da",
+      "app/package-lock.json": "35d5b8fb8d5a868a368e381f87c4440a077d8068ecce11dc6076e11658f9245a",
+      "app/src/transfer/edition.ts": "9b372bfad3176460b27f89c70c5800457dd124889fefa0b3cf533b372b442ef2",
+      "app/index.html": "9aa8a2bc8db272788480b167e0987be3537727eb1de3384acd0eef956cab1f89",
+      "app/src/storage/editor-lock.ts": "a6f3d94d2bea903b1a99d7b7894124998900140b76d1d1c40017144465b9cb71"
+    },
+    "sourceComparison": {
+      "changed": [
+        {
+          "file": "app/README.md",
+          "status": "changed"
+        }
+      ],
+      "runtimeTestsAndConfigurationUnchanged": true,
+      "readmeFormattingRechecked": true,
+      "readmeMtime": "2026-11-20T07:46:19.215Z",
+      "readmeChangedAfterFinalFormat": false
+    },
+    "orphanInspection": {
+      "matchedOrphanProcesses": 0,
+      "terminatedProcesses": [],
+      "scope": "Проверялись Edge/Node, однозначно привязанные к D:\\CodexTemp\\rodoslovnaya-github-20261120. Подтвержденных остатков не найдено."
+    },
+    "completedBrowserVerificationAt": "2026-11-20T08:11:55.844Z"
+  },
+  "auditAssessment": {
+    "checkedOn": "2026-11-20",
+    "previousAssessment": "research-data/deployment-checks-2026-11-17.json: localChecks.dependencyAssessment",
+    "fullAuditPassed": false,
+    "currentVulnerabilityCounts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 10,
+      "high": 0,
+      "critical": 0,
+      "total": 10
+    },
+    "productionVulnerabilityCounts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "sourceAdvisories": [
+      {
+        "id": "GHSA-3g3m-2fjr-6pw4",
+        "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-3g3m-2fjr-6pw4",
+        "condition": "Продолжение обхода файловой системы после отмены через AbortSignal; влияет на доступность.",
+        "patchedVersions": ">=14.0.2"
+      },
+      {
+        "id": "GHSA-g3hv-75wg-m249",
+        "url": "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249",
+        "condition": "Недоверенный шаблон при optimizationLevel >= 2 вызывает чрезмерный расход процессора и памяти.",
+        "patchedVersions": "11.0.1"
+      }
+    ],
+    "codeEvidence": [
+      {
+        "path": "app/vite.config.ts:26",
+        "finding": "Шаблон сборки фиксирован: **/*.{js,css,html,svg,png,woff2}."
+      },
+      {
+        "path": "app/node_modules/workbox-build/build/lib/get-file-details.js:23",
+        "finding": "Установленный Workbox вызывает globSync с cwd/follow/ignore, без signal."
+      },
+      {
+        "path": "app/node_modules/glob/dist/commonjs/glob.js:153",
+        "finding": "Glob задает optimizationLevel: 2; защита оценки minimatch основана на доверенном фиксированном шаблоне."
+      },
+      {
+        "path": "app/package-lock.json",
+        "finding": "Затронутые glob/minimatch и их перечисленные цепочки помечены dev."
+      },
+      {
+        "path": "app/src/",
+        "finding": "Импортов glob/minimatch и передачи им семейных файлов не найдено."
+      }
+    ],
+    "assessment": "Условия эксплуатации двух известных проблем в текущем пути приложения и фиксированной сборки не обнаружены. Это оценка применимости, а не успешный полный аудит и не отсутствие риска средств разработки.",
+    "initialCommitRecommendation": "Сохранить существующие замечания как открытое ограничение исходного состояния, с реальными кодами завершения и отдельным последующим исправлением; не обозначать полный аудит успешным.",
+    "projectRule": "knowledge/git-preparation.md требует устранить ошибки обязательных проверок либо явно разрешить их отдельным решением до отправки.",
+    "riskDecisionMadeByThisAgent": false,
+    "automaticDependencyChanges": false,
+    "reassessWhen": [
+      "Изменяются шаблоны или инструменты сборки",
+      "Шаблоны либо пути приходят от недоверенного источника",
+      "Появляются новые бюллетени или обновления зависимостей"
+    ]
+  },
+  "knowledgeChecks": {
+    "status": "passed",
+    "documents": 25,
+    "ordinaryLinks": 298,
+    "wikiLinks": 84,
+    "errors": 0,
+    "selfTestPassed": 29,
+    "selfTestTotal": 29
+  },
+  "independentReview": {
+    "documentation": "Проверены README и инструкция совместной работы; выявлен и исправлен переход origin после fork",
+    "workflow": "Независимо проверены YAML, PowerShell, команды, права токена и CODEOWNERS; существенных дефектов нет",
+    "remaining": "Существенных замечаний к подготовленному составу нет; фактическая отправка и правила GitHub проверяются отдельно"
+  },
+  "privacy": {
+    "sourceCodeChanged": false,
+    "familyDatabaseIncluded": false,
+    "personalKnowledgeBaseIncluded": false,
+    "thirdPartyProgramsIncluded": false,
+    "secretMarkerFiles": [],
+    "manualReview": "Проверены исходники, документы, ops и новые материалы; настоящая семья и секреты не обнаружены. Это не абсолютная гарантия автоматического поиска."
+  },
+  "languageReview": {
+    "status": "passed",
+    "files": [
+      "AGENTS.md",
+      "INDEX.md",
+      "KNOWLEDGE-POLICY.md",
+      "knowledge/INDEX.md",
+      "knowledge/git-preparation.md",
+      "knowledge/CURRENT-STATE.md",
+      "plans/2026-11-17-knowledge-navigation.md",
+      "research-data/README.md",
+      "retrospectives/INDEX.md",
+      "README.md",
+      "knowledge/collaboration.md",
+      "retrospectives/2026-11-20-github-handoff.md",
+      "app/README.md"
+    ],
+    "result": "Найдены строки с латиницей по точному списку 13 измененных Markdown-файлов; каждое совпадение разобрано вручную. Сохранены точные команды, пути, URL, поля, названия и поясненные необходимые термины. Применены humanizer и technical-documentation; длинных тире и поврежденных символов нет."
+  },
+  "candidateManifest": [
+    {
+      "path": ".github/CODEOWNERS",
+      "bytes": 99,
+      "sha256": "97e26b97604913436554f4e733129eb0a104cde23fc431b2acbb0b594b497f0d"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "bytes": 9125,
+      "sha256": "1fe13e31950a336fa20cc1413a715dd9e5c3d67d59b3581397fd892950fddef8"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 448,
+      "sha256": "692b95d5affcb03c01d52e76df0ee8715c949f78ce14cbfaeb6ffead3bbcba98"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 10759,
+      "sha256": "602aa2a37b2009603f6deee0fc10ad0cd293a9f68dffd621479501874fd74c98"
+    },
+    {
+      "path": "INDEX.md",
+      "bytes": 5289,
+      "sha256": "2a3c502eb304c3b58e92ffe30eec51b1b5a0fe0a24aca2bfb636ff69fce0d6aa"
+    },
+    {
+      "path": "KNOWLEDGE-POLICY.md",
+      "bytes": 11753,
+      "sha256": "b17730955a71241bee18221347e3fd1446a879a66f42cc221d6ef833d6ab34ee"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4955,
+      "sha256": "450dc5059008f303d1ac23fdcd9fb10bb75011aab27b7ef561082d7288042935"
+    },
+    {
+      "path": "app/.prettierignore",
+      "bytes": 67,
+      "sha256": "4c560bd723a9119ebfc1c57dc43d24c812cdee3716e6babe5816b60ee91ec371"
+    },
+    {
+      "path": "app/.prettierrc.json",
+      "bytes": 67,
+      "sha256": "f583ff6d8ba542b76af46c4c024a0941b77aee51133bb0f69ec6eb1fa613de7e"
+    },
+    {
+      "path": "app/README.md",
+      "bytes": 14392,
+      "sha256": "5960896cff9e74a3d8735b5452d982e0d51233438cfab5fe621caf023b832814"
+    },
+    {
+      "path": "app/eslint.config.js",
+      "bytes": 646,
+      "sha256": "e0e2c6707a364cbf907d40e54cfd311a18a81c44da1e93805f0f5707fa9466dd"
+    },
+    {
+      "path": "app/index.html",
+      "bytes": 671,
+      "sha256": "9aa8a2bc8db272788480b167e0987be3537727eb1de3384acd0eef956cab1f89"
+    },
+    {
+      "path": "app/package-lock.json",
+      "bytes": 294829,
+      "sha256": "35d5b8fb8d5a868a368e381f87c4440a077d8068ecce11dc6076e11658f9245a"
+    },
+    {
+      "path": "app/package.json",
+      "bytes": 1126,
+      "sha256": "adab51aa2d7df726d19fc96556c4524ed076ae23463fdf53260c9fd248a9594f"
+    },
+    {
+      "path": "app/playwright.config.ts",
+      "bytes": 619,
+      "sha256": "7be58d41e0d766da54550bd11b19d52ceff36787905286a9a3c8716d17ddb9a3"
+    },
+    {
+      "path": "app/public/apple-touch-icon.png",
+      "bytes": 1180,
+      "sha256": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340"
+    },
+    {
+      "path": "app/public/icon-192.png",
+      "bytes": 1253,
+      "sha256": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1"
+    },
+    {
+      "path": "app/public/icon-512.png",
+      "bytes": 3599,
+      "sha256": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b"
+    },
+    {
+      "path": "app/public/icon.svg",
+      "bytes": 448,
+      "sha256": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd"
+    },
+    {
+      "path": "app/src/App.tsx",
+      "bytes": 58882,
+      "sha256": "d3435cf17e43c2454783c0700e2ed4c55b4460e4acfbad9e2ff6126ed2ae9500"
+    },
+    {
+      "path": "app/src/components/ArchiveView.tsx",
+      "bytes": 18733,
+      "sha256": "2cf893a1dd8e1d2d27900ac96caadc481b0f674d68e061e48ad31a4de06bde8b"
+    },
+    {
+      "path": "app/src/components/EntryForms.tsx",
+      "bytes": 8629,
+      "sha256": "70beef930a04a0ce9829f2188f925d8c48ac483f31837b1798891a3619e4782b"
+    },
+    {
+      "path": "app/src/components/FamilyTree.tsx",
+      "bytes": 14821,
+      "sha256": "2c42045294b8c9762e9d9d5dc783d1d74068e555ae473bf9f7e98753153e3e0c"
+    },
+    {
+      "path": "app/src/components/MaterialsView.tsx",
+      "bytes": 6743,
+      "sha256": "640c725a344da6ffc6da5a04bcd52837d9d8a096587128fa2197492067abe421"
+    },
+    {
+      "path": "app/src/components/PersonEditor.tsx",
+      "bytes": 8130,
+      "sha256": "10aa061848994eec0aac7efaab837cda5c553aabd1cc655484dd6c7c5c2336b4"
+    },
+    {
+      "path": "app/src/components/editor-common.tsx",
+      "bytes": 4053,
+      "sha256": "54eb4e46113dc63affd2db0f6f542c3251d0dd3da6c2dcd8b48dd2e63859f219"
+    },
+    {
+      "path": "app/src/components/family-tree.css",
+      "bytes": 4834,
+      "sha256": "3c7ccf48770f9bac10658766824fe2c0091c157c94124d20cdf1d9ea5ab0e1ee"
+    },
+    {
+      "path": "app/src/components/tree-layout.test.ts",
+      "bytes": 7029,
+      "sha256": "fcd66b3fbf507e7ab139b06cf55e39744841590baf692f52e9212e9db17ff6b0"
+    },
+    {
+      "path": "app/src/components/tree-layout.ts",
+      "bytes": 6225,
+      "sha256": "aa2e02252308029960b93e4c71679b0e85fa39f08266002bbdba22568548edd0"
+    },
+    {
+      "path": "app/src/domain/capacity.test.ts",
+      "bytes": 6082,
+      "sha256": "14c629fcf82821a330571bb0a4482a66150d93db868ae782bef5b8a159745b2e"
+    },
+    {
+      "path": "app/src/domain/capacity.ts",
+      "bytes": 5247,
+      "sha256": "522ad2bbf1c52d6d1cad1723c24e7a557d8c7c0e02fc4bba8fd9055f9ce532ef"
+    },
+    {
+      "path": "app/src/domain/model.test.ts",
+      "bytes": 13644,
+      "sha256": "7a43b3ca21fe4c19831b2c745492cc785161e5af561c5a290e2ff2e585ca3c44"
+    },
+    {
+      "path": "app/src/domain/model.ts",
+      "bytes": 21403,
+      "sha256": "477b5243e0c1d1ccba886439215028aa7cba80aced1a7db3454acb6c869132da"
+    },
+    {
+      "path": "app/src/domain/types.ts",
+      "bytes": 1891,
+      "sha256": "b07ce3baa13e92f76680e871a22301fbbf992704749b4c380c494fd48b64e7b6"
+    },
+    {
+      "path": "app/src/main.tsx",
+      "bytes": 158,
+      "sha256": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0"
+    },
+    {
+      "path": "app/src/media.ts",
+      "bytes": 3743,
+      "sha256": "6cecac1374b54c073bde66df06a4a6e509d6e49b2eb6cea43c9dee5496fae755"
+    },
+    {
+      "path": "app/src/storage/editor-lock.ts",
+      "bytes": 3195,
+      "sha256": "a6f3d94d2bea903b1a99d7b7894124998900140b76d1d1c40017144465b9cb71"
+    },
+    {
+      "path": "app/src/storage/repository-mvp.test.ts",
+      "bytes": 10232,
+      "sha256": "fcad2a567369787f4f99974ddc9917aecdcd4412a67d7c017743c0c8d3d9b3eb"
+    },
+    {
+      "path": "app/src/storage/repository.test.ts",
+      "bytes": 9691,
+      "sha256": "409589874779ed6fdc84400f56e0407b77fe4eb5a3d2a8a212e7f033470ec673"
+    },
+    {
+      "path": "app/src/storage/repository.ts",
+      "bytes": 17264,
+      "sha256": "9ad6d1aae635062d025750e3317ca3094beef279b134c45e06bee4b63b8700d4"
+    },
+    {
+      "path": "app/src/storage/use-project.test.ts",
+      "bytes": 7511,
+      "sha256": "52fbefc0faf5b90f3f03de8a242b26289b3c072873542310bd7293657fc1de97"
+    },
+    {
+      "path": "app/src/storage/use-project.ts",
+      "bytes": 6652,
+      "sha256": "7f63a8c3c9f0344d90beccb84e6af0a94afdb5738556b32ca7766b7587a197a2"
+    },
+    {
+      "path": "app/src/styles.css",
+      "bytes": 26651,
+      "sha256": "7dff522bf527158f0bb215d9f86918ac2579d44365a93f5527314d17dbc88b49"
+    },
+    {
+      "path": "app/src/transfer/archive-client.test.ts",
+      "bytes": 4563,
+      "sha256": "af52fb94d9339c4e48673f911266d01b63ffbc8138b3587344d9cdc43ae7f79c"
+    },
+    {
+      "path": "app/src/transfer/archive-client.ts",
+      "bytes": 2893,
+      "sha256": "d0d7f5d97d6007fdd1b0afefbfd922480891d7771d2dc32920c8fabf5b2d7081"
+    },
+    {
+      "path": "app/src/transfer/archive.test.ts",
+      "bytes": 18648,
+      "sha256": "9345ca304b921a2c940b1597e81ebbf2f60bf473744289cd7dd7d5e1fe98f7f6"
+    },
+    {
+      "path": "app/src/transfer/archive.ts",
+      "bytes": 21795,
+      "sha256": "1a7dabca3bd20aaf8ae694a63f7c6739bc6de019955298bebb6a37c9291bfc64"
+    },
+    {
+      "path": "app/src/transfer/archive.worker.ts",
+      "bytes": 980,
+      "sha256": "64f8452ee45c9245ba07488cbef4c1c40c73bb98b671c57c7c2bea0b12a92878"
+    },
+    {
+      "path": "app/src/transfer/edition.test.ts",
+      "bytes": 12919,
+      "sha256": "ade82c98169ed6cc0249e7aee93c845885da7bd3b6a55fd08b835ca5516c429c"
+    },
+    {
+      "path": "app/src/transfer/edition.ts",
+      "bytes": 8162,
+      "sha256": "9b372bfad3176460b27f89c70c5800457dd124889fefa0b3cf533b372b442ef2"
+    },
+    {
+      "path": "app/tests/journey.spec.ts",
+      "bytes": 14890,
+      "sha256": "42ec148cc3bb7b05b7b231d0935406a16a8ec535d2a3fdd1597510ea4da70be0"
+    },
+    {
+      "path": "app/tests/migration.spec.ts",
+      "bytes": 3767,
+      "sha256": "8ba308613400070e9f19a0efb9a32a45cfc671b745499da65c127e42e230c3c0"
+    },
+    {
+      "path": "app/tests/mvp.spec.ts",
+      "bytes": 8394,
+      "sha256": "7c22330f0b3f64bd944b628c7e382d043d5bc8da8bdc15942d32f2fd1cb3a011"
+    },
+    {
+      "path": "app/tests/recovery.spec.ts",
+      "bytes": 8871,
+      "sha256": "2859b671d72003bd10051647bbd04de63669120d6b085d3fb8e24067099445a6"
+    },
+    {
+      "path": "app/tests/timing.spec.ts",
+      "bytes": 3446,
+      "sha256": "61c3c73a5f907d00bcb2e82b4c5403e413a7777e306a9fe02389e66fa3cacc23"
+    },
+    {
+      "path": "app/tests/volume.spec.ts",
+      "bytes": 6453,
+      "sha256": "85e84e3ae0e50d66ac7e4a7d107643feca97b1f67ca3e96e7260193a26844f03"
+    },
+    {
+      "path": "app/tsconfig.json",
+      "bytes": 517,
+      "sha256": "20d4989af22b81ccc2b8b1614351bc6c01b7dafcf4c8a8425f5e8e235aa3bbd3"
+    },
+    {
+      "path": "app/vite.config.ts",
+      "bytes": 1207,
+      "sha256": "17034539c76ec403f6e317fe27a2ec14647c7353cf110feb35e922c3186dc7b8"
+    },
+    {
+      "path": "competitor-matrix-2026-11-14.json",
+      "bytes": 62438,
+      "sha256": "892abf18f0d3f07b994237228bef200bd20bbcdd2440f362a57e313318511404"
+    },
+    {
+      "path": "knowledge/CURRENT-STATE.md",
+      "bytes": 7359,
+      "sha256": "536c52852db783ad48a979910ff11eb7930f55b0a4b423a9bf3b36b06309e4fe"
+    },
+    {
+      "path": "knowledge/INDEX.md",
+      "bytes": 9730,
+      "sha256": "8351ab7c61a1bce1af31bae86072071ce585e9a2d212d525e45b8ec160cdf811"
+    },
+    {
+      "path": "knowledge/architecture.md",
+      "bytes": 12844,
+      "sha256": "fa06bb67addcaa4b2c83b06bf380e3a565805cea859e6062250975e094def6ee"
+    },
+    {
+      "path": "knowledge/collaboration.md",
+      "bytes": 12724,
+      "sha256": "99c4f749a3078d50f4007140e9e6d73ae5712984f6c8c947e3b80e6810ea128e"
+    },
+    {
+      "path": "knowledge/git-preparation.md",
+      "bytes": 11097,
+      "sha256": "48189acddbec2951c4377d6dc297adef16b4a1ded7a1ee8b817ebafaf16e16ed"
+    },
+    {
+      "path": "knowledge/hosting.md",
+      "bytes": 10099,
+      "sha256": "069c08cc322da50dddfba62749567be11163b6b1502ad86353f8f22aab196189"
+    },
+    {
+      "path": "ops/rodoslovnaya.caddy",
+      "bytes": 982,
+      "sha256": "0eeb20cd96c492320181c2dc9fd89507fd67681f4c0bac9396973b7f94ec9088"
+    },
+    {
+      "path": "ops/rollback-first-publication.py",
+      "bytes": 2856,
+      "sha256": "9dcdc97f804d0b98cd3ac810990b36cb4f801fccc5ace24af2bfe6ea2b177628"
+    },
+    {
+      "path": "plans/2026-11-15-rodoslovnaya-mvp-pwa.md",
+      "bytes": 80630,
+      "sha256": "d4234946de312213b49c2b6c5872361eaebbd5283b9901453174e6ba623e1305"
+    },
+    {
+      "path": "plans/2026-11-17-knowledge-navigation.md",
+      "bytes": 17339,
+      "sha256": "a355dd22bed4067ddcf10b89043b6a15dafa434999e4f846a89db62e0ae1e029"
+    },
+    {
+      "path": "plans/INDEX.md",
+      "bytes": 2387,
+      "sha256": "3aa2fb39587cad3c4b1c6d81dc58d89d8cfc480990a4aa208d61df18dce0d940"
+    },
+    {
+      "path": "research-data/README.md",
+      "bytes": 6608,
+      "sha256": "bfb6c80d69559be5cc69859211afe392130616e32aa54b8a1a6bfc3d486bfb14"
+    },
+    {
+      "path": "research-data/deployment-checks-2026-11-17.json",
+      "bytes": 18511,
+      "sha256": "d0f12d7a7ed1043a208711870db54c97984a89ca45c36cf0da2a47ca6f5ec1d3"
+    },
+    {
+      "path": "research-data/evidence/family-echo-1000.png",
+      "bytes": 77564,
+      "sha256": "59b5eafc4c1ebac1c51873bda0176f8bfe13a9a1cad0677b449e2a5b5027fb4c"
+    },
+    {
+      "path": "research-data/evidence/family-echo-adoption.png",
+      "bytes": 73846,
+      "sha256": "465223eea59294b4494708d88b6c4d59a5dc755a1469026930c97d0bba95827d"
+    },
+    {
+      "path": "research-data/evidence/gramps-web-export.png",
+      "bytes": 45105,
+      "sha256": "d702733a03d8e887b4d1e333820de2c97ffecc95dccfb92ec0657a55fda97184"
+    },
+    {
+      "path": "research-data/fixtures/document.pdf",
+      "bytes": 66806,
+      "sha256": "a43ef10a78553eea943e15cb27a21f7ecab8311b3da7bdc4fa536c724bbf65de"
+    },
+    {
+      "path": "research-data/fixtures/family-1000.ged",
+      "bytes": 141213,
+      "sha256": "7240e3fa7c7a6027e0df53402a486d62269eb4553a105f36d4b4e6b0d1e97874"
+    },
+    {
+      "path": "research-data/fixtures/family-15.ged",
+      "bytes": 5048,
+      "sha256": "0144c6f8282be57f0bf2ecf5d8dcf71b71fdb8267dd25e60a0d1d28b9ed521b6"
+    },
+    {
+      "path": "research-data/fixtures/manifest.json",
+      "bytes": 1829,
+      "sha256": "fa8991525008516d37ffe6d058c1f912b85b1ecf01a6d9d97add082e794a554c"
+    },
+    {
+      "path": "research-data/fixtures/photo-1.png",
+      "bytes": 18098,
+      "sha256": "42824ef2905e8be49e41bbe993326dfa0bfc8c602880ed7bc2ddf943b451eb1a"
+    },
+    {
+      "path": "research-data/fixtures/photo-2.png",
+      "bytes": 18362,
+      "sha256": "74e0f068d579064ff0bd6e3c31277e5130e0a31f914dffbc3734a61e2d80af59"
+    },
+    {
+      "path": "research-data/fixtures/photo-3.png",
+      "bytes": 18410,
+      "sha256": "0ac232322ad633d315acf2b8ff84b1a5e07d8deb94ac4b497f002ce7ac18dbf4"
+    },
+    {
+      "path": "research-data/fixtures/photo-4.png",
+      "bytes": 18070,
+      "sha256": "30833f5002af0b60bb80bd68ab6c1e8c3a68bcf93e1663ff057d635653ac3dba"
+    },
+    {
+      "path": "research-data/fixtures/photo-5.png",
+      "bytes": 17819,
+      "sha256": "0f6d5b7a10b5ff8854c63b237226e44b0125f62ea8be272c46513a0f7b1bc0f9"
+    },
+    {
+      "path": "research-data/fixtures/story.txt",
+      "bytes": 396,
+      "sha256": "e642ec8a8bec74262c06ad0e7abea21a91ab6e48a432ac868fab0a0eb36fc32e"
+    },
+    {
+      "path": "research-data/github-handoff-2026-11-20.json",
+      "sha256": null,
+      "note": "Этот журнал не включает собственную контрольную сумму"
+    },
+    {
+      "path": "research-data/implementation-checks-2026-11-17.json",
+      "bytes": 8124,
+      "sha256": "d141cbc47691ad30197ae63797f794c90f772bf74d0ff39ec78ace36e370c5a4"
+    },
+    {
+      "path": "research-data/knowledge-checks-2026-11-17.json",
+      "bytes": 35184,
+      "sha256": "47780633550c9cc9536ee0ad0387adcc57635ab5cafb5a31463aaacb4d72bbf4"
+    },
+    {
+      "path": "research-data/practical-checks-2026-11-14.json",
+      "bytes": 7654,
+      "sha256": "93b4a47129d7f50c1cf9885fd9f105b54bd7d4882b469b799ff236919eb36211"
+    },
+    {
+      "path": "research/2026-11-14-genealogy-apps.md",
+      "bytes": 122385,
+      "sha256": "bf981c6174cf1a8fe99022a7b088c8ade681bc1b302d1137acdc414fb1e8f213"
+    },
+    {
+      "path": "research/INDEX.md",
+      "bytes": 3213,
+      "sha256": "4e76f220ac5e6cfeb940fc48805b6ef810c76e825d711a62f311935ed4716979"
+    },
+    {
+      "path": "retrospectives/2026-11-15-prototype.md",
+      "bytes": 4963,
+      "sha256": "1d945d0405962aea461890d4dc033e7d07ee86170686022b46a821bc0b03e783"
+    },
+    {
+      "path": "retrospectives/2026-11-17-hosting.md",
+      "bytes": 7545,
+      "sha256": "322334865da322facd9c4c1e7cebde74b5513e390d7704d80761a0f6e0ec7417"
+    },
+    {
+      "path": "retrospectives/2026-11-17-knowledge-navigation.md",
+      "bytes": 5575,
+      "sha256": "6368b62a7c9a63a5748a4037d7fdd61c5bf042d16792eb10343ca3e4c55c2aeb"
+    },
+    {
+      "path": "retrospectives/2026-11-17-mvp-implementation.md",
+      "bytes": 8193,
+      "sha256": "1aed506cf44eb9e672231d540239a393c2ea4f59b7e69bd7a4635a0c01bec386"
+    },
+    {
+      "path": "retrospectives/2026-11-17-plan-review.md",
+      "bytes": 5808,
+      "sha256": "945935fae29511ca707a64d523ce2d7818ca1766e9b9d3436898c5c469b63aec"
+    },
+    {
+      "path": "retrospectives/2026-11-20-github-handoff.md",
+      "bytes": 7171,
+      "sha256": "4acd6eef15d67de55b6a229b822f8f68b05125384a3816e2016d7abfdc9604db"
+    },
+    {
+      "path": "retrospectives/INDEX.md",
+      "bytes": 2816,
+      "sha256": "efb0089f29dde2899485555f1d128dbe97862b73351877315783c4e0513c2d6e"
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 4856,
+      "sha256": "71ddd38af69345a0a258b390e0df512e2d5e74cfe0576cc37a38140a280c272e"
+    },
+    {
+      "path": "scripts/check-knowledge.mjs",
+      "bytes": 24199,
+      "sha256": "b3ab689ea65f9ecd7e77336d719e16acfde2bd1cae5efe8e292af3fadad48656"
+    }
+  ],
+  "note": "Этот журнал фиксирует состояние перед первоначальной отправкой. Фактический коммит, удаленную ветку, защиту и запуск GitHub Actions проверять по GitHub и текущему Git; запись не подменяет их подтверждение.",
+  "remaining": [
+    "Подтвердить первоначальную отправку и настройку main по фактическому GitHub",
+    "У Натальи еще нет аккаунта GitHub: приглашение не отправлено; публичное клонирование доступно без регистрации",
+    "Открыты прежние 10 умеренных замечаний средств разработки и первопричина отказов памяти общего тестового исполнителя",
+    "Настоящие телефоны и самостоятельное семейное испытание остаются открытыми"
+  ],
+  "mobileCoverage": {
+    "method": "Полный мобильный набор по шести файлам в последовательных новых процессах",
+    "environment": {
+      "CI": "1",
+      "timeout": 30000
+    },
+    "expectedCount": 19,
+    "observedCount": 19,
+    "missingTests": [],
+    "extraTests": [],
+    "fullCoverage": true,
+    "passed": true,
+    "stats": {
+      "expected": 18,
+      "skipped": 1,
+      "unexpected": 0,
+      "flaky": 0,
+      "duration": 134064.692
+    },
+    "runs": [
+      {
+        "file": "tests/journey.spec.ts",
+        "name": "browser-mobile-isolated-journey",
+        "stats": {
+          "startTime": "2026-11-20T08:08:20.883Z",
+          "duration": 45600.865000000005,
+          "expected": 6,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      },
+      {
+        "file": "tests/migration.spec.ts",
+        "name": "browser-mobile-isolated-migration",
+        "stats": {
+          "startTime": "2026-11-20T08:09:08.987Z",
+          "duration": 5379.182,
+          "expected": 1,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      },
+      {
+        "file": "tests/mvp.spec.ts",
+        "name": "browser-mobile-isolated-mvp",
+        "stats": {
+          "startTime": "2026-11-20T08:09:17.022Z",
+          "duration": 21850.665,
+          "expected": 5,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      },
+      {
+        "file": "tests/recovery.spec.ts",
+        "name": "browser-mobile-isolated-recovery",
+        "stats": {
+          "startTime": "2026-11-20T08:09:41.355Z",
+          "duration": 26420.157,
+          "expected": 4,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      },
+      {
+        "file": "tests/timing.spec.ts",
+        "name": "browser-mobile-isolated-timing",
+        "stats": {
+          "startTime": "2026-11-20T08:10:11.923Z",
+          "duration": 24893.16,
+          "expected": 1,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      },
+      {
+        "file": "tests/volume.spec.ts",
+        "name": "browser-mobile-isolated-volume",
+        "stats": {
+          "startTime": "2026-11-20T08:10:39.222Z",
+          "duration": 9920.663,
+          "expected": 1,
+          "skipped": 1,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "failures": []
+      }
+    ],
+    "tests": [
+      {
+        "title": "семья, фотография, рассказ, архив и независимое восстановление",
+        "file": "journey.spec.ts",
+        "line": 27,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 17217,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "смена статуса на живого требует нового явного включения в выпуск",
+        "file": "journey.spec.ts",
+        "line": 110,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 4916,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "выпуск перекодирует импортированное изображение и удаляет скрытые метаданные",
+        "file": "journey.spec.ts",
+        "line": 132,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 3093,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "сохраненная карточка доступна после запуска без сети",
+        "file": "journey.spec.ts",
+        "line": 184,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 4337,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "второе окно читает архив и получает право записи после закрытия первого",
+        "file": "journey.spec.ts",
+        "line": 210,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 4361,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "второе окно обнаруживает архив, созданный после его открытия",
+        "file": "journey.spec.ts",
+        "line": 239,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 2191,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "старая блокировка удерживает миграцию до сохранения и закрытия прежнего окна",
+        "file": "migration.spec.ts",
+        "line": 5,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 1295,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "возврат ошибочного поля сохраняет другие сведения",
+        "file": "mvp.spec.ts",
+        "line": 19,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 3346,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "неверный черновик требует явного решения перед переходом",
+        "file": "mvp.spec.ts",
+        "line": 40,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 2321,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "корзина доступна после удаления последнего человека и перезапуска",
+        "file": "mvp.spec.ts",
+        "line": 51,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 2388,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "постоянный отказ записи не блокирует копирование сохраненного снимка",
+        "file": "mvp.spec.ts",
+        "line": 65,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 3758,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "основные экраны помещаются на телефоне и сохраняют положение дерева",
+        "file": "mvp.spec.ts",
+        "line": 100,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 4492,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "ошибка рассказа оставляет аварийную копию доступной прямо из формы",
+        "file": "recovery.spec.ts",
+        "line": 12,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 4458,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "изменение версии базы прекращает запись, сохраняя доступный незавершенный ввод",
+        "file": "recovery.spec.ts",
+        "line": 43,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 2730,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "возврат от другого узла восстанавливает корень и положение дерева",
+        "file": "recovery.spec.ts",
+        "line": 76,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 5187,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "возврат из списка восстанавливает камеру, а новая карточка не использует старую историю",
+        "file": "recovery.spec.ts",
+        "line": 106,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 6014,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "пять автономных запусков, размещений 80 карточек и открытий человека",
+        "file": "timing.spec.ts",
+        "line": 7,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 16822,
+        "errors": [],
+        "stderr": "",
+        "measurements": [
+          {
+            "name": "Быстродействие без сети",
+            "values": {
+              "launchMs": [1923, 1593, 2101, 1469, 1484],
+              "treeMs": [974, 929, 1510, 902, 945],
+              "cardMs": [169, 160, 152, 164, 137],
+              "heapBytes": [12660970, 38336057, 50729809, 42252904, 21941936],
+              "memoryScope": "Только куча JavaScript, не вся память процесса и файлов"
+            }
+          }
+        ]
+      },
+      {
+        "title": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+        "file": "volume.spec.ts",
+        "line": 10,
+        "project": "mobile-chromium",
+        "status": "skipped",
+        "durationMs": 704,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      },
+      {
+        "title": "поиск по тысяче людей возвращает нужную карточку",
+        "file": "volume.spec.ts",
+        "line": 106,
+        "project": "mobile-chromium",
+        "status": "passed",
+        "durationMs": 3978,
+        "errors": [],
+        "stderr": "",
+        "measurements": [
+          {
+            "name": "Время поиска",
+            "values": {
+              "measurementsMs": [186, 188, 197, 179, 286],
+              "medianMs": 188,
+              "worstMs": 286
+            }
+          }
+        ]
+      }
+    ],
+    "skipped": [
+      {
+        "title": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+        "file": "volume.spec.ts",
+        "line": 10,
+        "project": "mobile-chromium",
+        "status": "skipped",
+        "durationMs": 704,
+        "errors": [],
+        "stderr": "",
+        "measurements": []
+      }
+    ]
+  },
+  "ciPolicy": {
+    "mandatoryProductionAudit": true,
+    "allowedAdvisories": ["GHSA-3g3m-2fjr-6pw4", "GHSA-g3hv-75wg-m249"],
+    "newOrMalformedAdvisoriesBlocked": true,
+    "highAndCriticalBlocked": true,
+    "invalidReportsBlocked": true,
+    "auditGuardFixturesPassed": 16,
+    "independentAuditFixturesPassed": 9,
+    "mobileExitAggregationFixturesPassed": 5,
+    "githubRunNotYetVerified": true
+  },
+  "finalizedAt": "2026-11-20T12:13:17.4026403+04:00",
+  "candidateCount": 100
+}

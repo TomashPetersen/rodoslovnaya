@@ -1,0 +1,441 @@
+{
+  "checkedOn": "2026-11-17",
+  "recordedAt": "2026-11-17T08:55:10.574955+00:00",
+  "timezone": "Europe/Astrakhan",
+  "status": "published-device-acceptance-open",
+  "authorization": {
+    "deployment": "Прямая команда владельца разместить на хостинге по SSH, доступ взять из других проектов",
+    "hostname": "Владелец подтвердил временный HTTPS-адрес на текущем VPS"
+  },
+  "target": {
+    "url": "https://rodoslovnaya.152.228.112.185.sslip.io",
+    "sshAlias": "adminvps-tatar",
+    "webServer": "Caddy v2.11.9",
+    "release": "20261117T082505Z",
+    "root": "/srv/rodoslovnaya",
+    "currentTarget": "releases/20261117T082505Z",
+    "siteConfiguration": "/etc/caddy/rodoslovnaya.caddy",
+    "backup": "/var/backups/rodoslovnaya/20261117T082505Z",
+    "rollbackScript": "/srv/rodoslovnaya/releases/20261117T082505Z/rollback.py"
+  },
+  "artifact": {
+    "sourceJournal": "research-data/implementation-checks-2026-11-17.json",
+    "sourceFingerprintSha256": "a7f7885029e2c91ca0696e8654b56873ee46cc4aa7e2260d25ab83aca4c8b9e2",
+    "sourceHashesMatched": 31,
+    "fileCount": 15,
+    "totalBytes": 2361515,
+    "tarSha256": "9d50e1acaccd51f16be9a5db07528bc9f8bbada7f6341552f962e4dce5a0baf0",
+    "filesSha256": {
+      "apple-touch-icon.png": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340",
+      "assets/archive.worker-DXnIrzp8.js": "fc7aaef9f44f550f76e1b1acca5e626267b4b1f8d6b942900f482067b0e5f9a1",
+      "assets/elk-worker.min-J_vVZCZ4.js": "dca3a19d9ec37f5634bf5876b4ebd2455c3f43f0d32570136c13c13edaba9bfb",
+      "assets/FamilyTree-Ce5wxE_B.js": "2edeba9a2845c5df4d4b1e86016ca22d4f90596defd3394e292229143d4c77fb",
+      "assets/FamilyTree-DuJsKjZg.css": "86a510e9a0f3be7b3731aefe3b3ec0ed774d3cd081951d2bb7ead62a99e3d1c6",
+      "assets/index-5AU68ny2.js": "8d591ea618b3fc03cc57a3f793aa0332b84b6043aec01f4d2ea5a5107a9e6bc6",
+      "assets/index-C_5INJZU.css": "c6f25ea6bd2185dd8911a2c3d7260ad43d3ffcfcc18af6a6de4bea38d2b1f14a",
+      "assets/workbox-window.prod.es5-BBnX5xw4.js": "cadd21be4a88598a4dec91a26a025df0a5790ff6baec54a884e401c3f5c95557",
+      "icon-192.png": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1",
+      "icon-512.png": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b",
+      "icon.svg": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd",
+      "index.html": "533f7930195b0302bda9c49790b8fbff17b272870a5797208f8246647ea09cab",
+      "manifest.webmanifest": "2f623e63ba3cb130b99f06cdee53dc3228a7a4a1b97e1f9bfa34f6cc2e74df1d",
+      "sw.js": "cda44a053d2f46631ed3e177fe10cb2307751c6c39e0fe8e7faee21fcc768e0a",
+      "workbox-2fbc6a65.js": "39c2e6ae44c3f29666f6a328b6523bf13a053a1d95c74af8ddea82b1045b0b6e"
+    },
+    "onlyStaticAssets": true,
+    "familyDataUploaded": false,
+    "applicationSourceCodeUploaded": false,
+    "operationalScriptsOutsidePublicRoot": true
+  },
+  "localChecks": {
+    "commands": [
+      "npm.cmd run format:check",
+      "npm.cmd run lint",
+      "npm.cmd run typecheck",
+      "npm.cmd test",
+      "npm.cmd run build",
+      "npm.cmd run test:browser -- --timeout=30000 --reporter=json",
+      "npm.cmd audit --omit=dev --json",
+      "npm.cmd audit --json"
+    ],
+    "formatter": "passed",
+    "lint": "passed",
+    "typecheck": "passed",
+    "unit": {
+      "passed": 130,
+      "files": 9
+    },
+    "build": "passed",
+    "browser": {
+      "startTime": "2026-11-17T08:22:59.911Z",
+      "duration": 210001.027,
+      "expected": 36,
+      "skipped": 2,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "node": "24.15.0",
+    "browserVersion": "157.0.4341.60",
+    "mobile": "Имитация Pixel 7, не настоящее устройство",
+    "productionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "allDependenciesAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 10,
+      "high": 0,
+      "critical": 0,
+      "total": 10
+    },
+    "dependencyAssessment": {
+      "scope": "Только средства разработки; в статический dist и выполнение на сервере не входят",
+      "rootAdvisories": [
+        "https://github.com/isaacs/node-glob/security/advisories/GHSA-3g3m-2fjr-6pw4",
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249"
+      ],
+      "reason": "Используются фиксированные шаблоны сборки, недоверенные семейные файлы в glob/minimatch не передаются. Условия эксплуатации при текущей публикации не обнаружены. Автоматическое понижение vite-plugin-pwa не выполнялось.",
+      "changedPackages": false
+    }
+  },
+  "server": {
+    "release": "20261117T082505Z",
+    "mainBeforeSha256": "4fc1af8d04833655f3cbcb9cd28023486f06921524928b16eacb6d618dcafe99",
+    "importsBefore": {
+      "/etc/caddy/buhgalter.caddy": "9f264da67ada161c956a38f3da02e5bdcef2e492175b9125b9433b098e65c64d",
+      "/etc/caddy/dar-preview.caddy": "cc055884d4d61ce5d0bcf3e84cad692d586e1f81bddc0559bab282811025317c",
+      "/etc/caddy/schemograph-admin.caddy": "3add9f74935ffcc01aa603f72f78ad06b4e699ac2c7c5140b8d164e9da977902",
+      "/etc/caddy/volkovsystems.caddy": "dc70710cbae62fa80c96d8b72b641a33cefa76784bfa1c6a6cff4ffb037f76bc"
+    },
+    "activeMatchedDisk": true,
+    "neighborsBefore": {
+      "ege-platova.ru": {
+        "status": 200,
+        "sha256": "0cc10091f938c981dd6d59ceb35924587409be8d9bf283224bd8931350ed7c54"
+      },
+      "schemograf.ru": {
+        "status": 200,
+        "sha256": "400921525f9f437a1b9c43e45245d605480028157f81987853985db9ef888052"
+      },
+      "lazarbike.ru": {
+        "status": 200,
+        "sha256": "17f8847a00789c4f28af7fa3c7b0327eac4e2edf1a7cd2b0580029a7576d9516"
+      },
+      "volkovsystems.ru": {
+        "error": "<urlopen error [Errno -5] No address associated with hostname>"
+      },
+      "dar-preview.152-228-112-185.sslip.io": {
+        "status": 200,
+        "sha256": "2a09b45a1aff19b9f6e8f92e058eca5c700a3baa09ffb0bc8ade8d72af0324c5"
+      }
+    },
+    "backup": "/var/backups/rodoslovnaya/20261117T082505Z",
+    "root": "/srv/rodoslovnaya",
+    "filesMatched": 15,
+    "prepared": true,
+    "activated": true,
+    "mainAfterSha256": "dbd01053f6255152f5b98b9a05eba581573beea01731d6bf1c9805fb8d9f9886",
+    "siteConfigSha256": "0eeb20cd96c492320181c2dc9fd89507fd67681f4c0bac9396973b7f94ec9088",
+    "originalBytesPreserved": true,
+    "importsPreserved": true
+  },
+  "postDeploymentServerChecks": {
+    "activeMatchesDisk": true,
+    "oldSourcesUnchanged": true,
+    "neighborsAfter": {
+      "ege-platova.ru": {
+        "status": 200,
+        "sha256": "0cc10091f938c981dd6d59ceb35924587409be8d9bf283224bd8931350ed7c54",
+        "bodyUnchanged": true
+      },
+      "schemograf.ru": {
+        "status": 200,
+        "sha256": "400921525f9f437a1b9c43e45245d605480028157f81987853985db9ef888052",
+        "bodyUnchanged": true
+      },
+      "lazarbike.ru": {
+        "status": 200,
+        "sha256": "17f8847a00789c4f28af7fa3c7b0327eac4e2edf1a7cd2b0580029a7576d9516",
+        "bodyUnchanged": true
+      },
+      "volkovsystems.ru": {
+        "error": "<urlopen error [Errno -5] No address associated with hostname>",
+        "unavailableBeforeDeployment": true
+      },
+      "dar-preview.152-228-112-185.sslip.io": {
+        "status": 200,
+        "sha256": "2a09b45a1aff19b9f6e8f92e058eca5c700a3baa09ffb0bc8ade8d72af0324c5",
+        "bodyUnchanged": true
+      }
+    }
+  },
+  "http": {
+    "base": "https://rodoslovnaya.152.228.112.185.sslip.io",
+    "fileCountMatched": 15,
+    "resources": {
+      "apple-touch-icon.png": {
+        "status": 200,
+        "contentType": "image/png",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "assets/archive.worker-DXnIrzp8.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/elk-worker.min-J_vVZCZ4.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/FamilyTree-Ce5wxE_B.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/FamilyTree-DuJsKjZg.css": {
+        "status": 200,
+        "contentType": "text/css; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/index-5AU68ny2.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/index-C_5INJZU.css": {
+        "status": 200,
+        "contentType": "text/css; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/workbox-window.prod.es5-BBnX5xw4.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "icon-192.png": {
+        "status": 200,
+        "contentType": "image/png",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "icon-512.png": {
+        "status": 200,
+        "contentType": "image/png",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "icon.svg": {
+        "status": 200,
+        "contentType": "image/svg+xml",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "index.html": {
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "manifest.webmanifest": {
+        "status": 200,
+        "contentType": null,
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "sw.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "no-cache",
+        "sha256Matched": true
+      },
+      "workbox-2fbc6a65.js": {
+        "status": 200,
+        "contentType": "text/javascript; charset=utf-8",
+        "cacheControl": "public, max-age=31536000, immutable",
+        "sha256Matched": true
+      },
+      "assets/missing-deploy-check.js": {
+        "status": 404,
+        "cacheControl": "no-store"
+      },
+      ".env": {
+        "status": 404,
+        "cacheControl": "no-store"
+      },
+      "src/App.tsx": {
+        "status": 404,
+        "cacheControl": "no-store"
+      },
+      "metadata.json": {
+        "status": 404,
+        "cacheControl": "no-store"
+      }
+    },
+    "certificate": {
+      "subject": [
+        [
+          [
+            "commonName",
+            "rodoslovnaya.152.228.112.185.sslip.io"
+          ]
+        ]
+      ],
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YE2"
+          ]
+        ]
+      ],
+      "notBefore": "Nov 17 07:36:45 2026 GMT",
+      "notAfter": "Feb 15 07:36:44 2027 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "rodoslovnaya.152.228.112.185.sslip.io"
+        ]
+      ],
+      "protocol": "TLSv1.3"
+    }
+  },
+  "browserSmoke": {
+    "base": "https://rodoslovnaya.152.228.112.185.sslip.io",
+    "browser": "157.0.4341.60",
+    "results": [
+      {
+        "name": "desktop",
+        "status": "passed",
+        "secureContext": true,
+        "tree": true,
+        "photo": true,
+        "story": true,
+        "zipExportImport": true,
+        "editionImage": true,
+        "printInvoked": true,
+        "offlineReload": true,
+        "worker": "https://rodoslovnaya.152.228.112.185.sslip.io/sw.js",
+        "pageErrors": [],
+        "externalRequests": [],
+        "cspViolations": [],
+        "httpErrors": []
+      },
+      {
+        "name": "mobile",
+        "status": "passed",
+        "secureContext": true,
+        "tree": true,
+        "photo": true,
+        "story": true,
+        "zipExportImport": true,
+        "editionImage": true,
+        "printInvoked": true,
+        "offlineReload": true,
+        "worker": "https://rodoslovnaya.152.228.112.185.sslip.io/sw.js",
+        "pageErrors": [],
+        "externalRequests": [],
+        "cspViolations": [],
+        "httpErrors": []
+      }
+    ]
+  },
+  "rollback": {
+    "candidateValidation": "passed",
+    "applyExecuted": false,
+    "browserDatabaseCleared": false,
+    "limitation": "Первое размещение: сценарий снимает собственный сайт, не возвращает предыдущий выпуск. При изменении общей конфигурации останавливается до записи. Следующие выпуски должны сохранять совместимость базы v2 и прежние хешированные ресурсы.",
+    "revalidationAfterFailureRecoveryChange": "passed; кандидат повторно проверен после добавления восстановления настроек при ошибке перечитывания; --apply не выполнялся"
+  },
+  "verificationCorrections": [
+    {
+      "scope": "Временный сценарий браузера",
+      "result": "Первые два запуска остановлены из-за неточных ожиданий проверяющего кода: два изображения вместо одного; после независимого восстановления выбран первый человек, а не прежний центр дерева. Исправлены только проверки."
+    },
+    {
+      "scope": "Временный сценарий браузера",
+      "result": "Одна промежуточная правка ожидания затронула первый одноименный участок сценария; область исправлена и выполнен полный повторный запуск. Программа и серверная сборка не менялись."
+    }
+  ],
+  "limitations": [
+    "Настоящие Android и iPhone, установка и системные пути файлов не проверены.",
+    "Запуск печати подтвержден вызовом print() и формированием PDF на Windows; физический принтер и открытие получателем не проверены.",
+    "Поддержка HEIC и пиковая память всего браузера остаются открытыми.",
+    "volkovsystems.ru не разрешался через DNS еще до размещения; после размещения наблюдение то же.",
+    "Временный адрес использует внешний DNS-сервис sslip.io; при смене адреса семейные данные переносятся через ZIP."
+  ],
+  "sources": [
+    "https://caddyserver.com/docs/caddyfile/directives/file_server",
+    "https://caddyserver.com/docs/caddyfile/directives/header",
+    "https://caddyserver.com/docs/automatic-https",
+    "https://nip.io/"
+  ],
+  "documentationChecks": {
+    "selfTest": {
+      "passed": 29,
+      "total": 29,
+      "command": "node scripts/check-knowledge.mjs --self-test"
+    },
+    "knowledge": {
+      "documents": 22,
+      "markdownLinks": 261,
+      "wikiLinks": 72,
+      "errors": 0,
+      "command": "node scripts/check-knowledge.mjs"
+    },
+    "formatter": "npm.cmd run format:check: passed after app/README.md update",
+    "languageReview": {
+      "files": [
+        "app/README.md",
+        "plans/2026-11-15-rodoslovnaya-mvp-pwa.md",
+        "plans/INDEX.md",
+        "knowledge/CURRENT-STATE.md",
+        "knowledge/INDEX.md",
+        "research-data/README.md",
+        "retrospectives/INDEX.md",
+        "knowledge/hosting.md",
+        "retrospectives/2026-11-17-hosting.md"
+      ],
+      "latinMatchesReviewed": true,
+      "longDashes": 0,
+      "replacementCharacters": 0,
+      "decision": "Сохранены только точные пути/команды/поля/адреса, официальные названия и необходимые объясненные термины; необязательная DNS-формулировка заменена русской."
+    },
+    "correction": "Промежуточная проверка якорей выявила CRLF в измененных Python документах. Возвращены окончания строк LF; исходники проверяющего скрипта не менялись, повторная проверка прошла."
+  },
+  "deploymentFilesSha256": {
+    "ops/rodoslovnaya.caddy": "0eeb20cd96c492320181c2dc9fd89507fd67681f4c0bac9396973b7f94ec9088",
+    "ops/rollback-first-publication.py": "9dcdc97f804d0b98cd3ac810990b36cb4f801fccc5ace24af2bfe6ea2b177628"
+  },
+  "updatedAt": "2026-11-17T09:10:20.598403+00:00",
+  "independentReview": {
+    "hostingScripts": "Выявленные замечания прав, области отката, импортов и кэширования ошибок исправлены до включения; повторная проверка не выявила блокирующих дефектов.",
+    "publishedEvidence": "Независимо сопоставлены журнал, публичные проверки, состояние сервера, инструкция и раздел 17 плана; противоречий не обнаружено.",
+    "languageReview": "Отдельная вычитка обоих вспомогательных отчетов и девяти измененных Markdown-файлов выполнена."
+  }
+}

@@ -1,0 +1,177 @@
+name: Проверки проекта
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Проверки Windows и Edge
+    runs-on: windows-2025
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: app
+
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Подготовить Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Проверить самопроверку базы знаний
+        working-directory: .
+        run: node scripts/check-knowledge.mjs --self-test
+
+      - name: Проверить ссылки и достижимость документов
+        working-directory: .
+        run: node scripts/check-knowledge.mjs
+
+      - name: Установить точные зависимости приложения
+        id: install
+        run: npm.cmd ci
+
+      - name: Проверить рабочие зависимости
+        run: npm.cmd audit --omit=dev
+
+      - name: Проверить форматирование
+        run: npm.cmd run format:check
+
+      - name: Проверить стиль кода
+        run: npm.cmd run lint
+
+      - name: Проверить типы
+        run: npm.cmd run typecheck
+
+      - name: Выполнить модульные проверки
+        run: npm.cmd test
+
+      - name: Собрать приложение
+        run: npm.cmd run build
+
+      - name: Проверить приложение в Edge на компьютере
+        run: npm.cmd run test:browser -- --timeout=30000 --project=chromium
+
+      - name: Проверить приложение в имитации телефона
+        env:
+          CI: "1"
+        run: |
+          $PSNativeCommandUseErrorActionPreference = $false
+          $testFiles = @(Get-ChildItem -LiteralPath tests -Filter '*.spec.ts' -File | Sort-Object Name)
+          if ($testFiles.Count -eq 0) { throw 'Не найдены файлы мобильных браузерных проверок.' }
+          $results = @()
+          foreach ($testFile in $testFiles) {
+            $testPath = "tests/$($testFile.Name)"
+            Write-Output "Мобильная проверка: $testPath"
+            npm.cmd run test:browser -- "$testPath" --project=mobile-chromium --timeout=30000
+            $testExit = $LASTEXITCODE
+            $results += [pscustomobject]@{ File = $testPath; ExitCode = $testExit }
+            Write-Output "Код завершения ${testPath}: $testExit"
+          }
+          $results | ConvertTo-Json | Set-Content -LiteralPath mobile-browser-exit-codes.json -Encoding utf8
+          $results | Format-Table -AutoSize
+          if (@($results | Where-Object { $_.ExitCode -ne 0 }).Count -gt 0) {
+            throw 'Не все мобильные проверки завершились успешно. Коды каждого файла сохранены в mobile-browser-exit-codes.json.'
+          }
+          exit 0
+
+      # На 17.11.2026 известны 10 умеренных замечаний средств разработки.
+      # Отчет сохраняет исходный результат; следующий шаг проверяет границы исключения.
+      - name: "Полный аудит: неблокирующий отчет (известны 10 умеренных замечаний разработки)"
+        id: full_audit
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          npm.cmd audit --json > npm-audit-all.json
+          $auditExit = $LASTEXITCODE
+          "audit_exit=$auditExit" | Add-Content -LiteralPath $env:GITHUB_OUTPUT -Encoding utf8
+          $auditText = Get-Content -LiteralPath npm-audit-all.json -Raw
+          Write-Output $auditText
+          $summary = @(
+            '## Полный аудит зависимостей'
+            ''
+            'Исходный результат аудита сохранен. Отдельный обязательный шаг проверяет границы исключения; аудит рабочих зависимостей также обязателен.'
+            'На 17.11.2026 известны 10 умеренных замечаний средств разработки; актуальные числа приведены ниже.'
+            "Код завершения npm audit: $auditExit."
+          )
+          try {
+            $audit = $auditText | ConvertFrom-Json
+            $counts = $audit.metadata.vulnerabilities
+            if ($null -ne $counts) {
+              $summary += "Всего: $($counts.total); умеренных: $($counts.moderate); высоких: $($counts.high); критических: $($counts.critical)."
+            } else {
+              $summary += 'Сводка замечаний не получена. Подробности находятся в журнале шага.'
+            }
+          } catch {
+            $summary += 'Не удалось разобрать ответ npm. Подробности находятся в журнале шага.'
+          }
+          $summary | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY -Encoding utf8
+          if ($auditExit -ne 0) {
+            Write-Output "::warning::Полный аудит завершился с кодом $auditExit. См. неблокирующий отчет и журнал шага."
+          }
+          exit $auditExit
+
+      - name: Проверить границы исключения полного аудита
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        env:
+          NPM_AUDIT_EXIT: ${{ steps.full_audit.outputs.audit_exit }}
+        run: |
+          if ($env:NPM_AUDIT_EXIT -notin @('0', '1')) {
+            throw "Полный npm audit не завершился корректно: код '$env:NPM_AUDIT_EXIT'."
+          }
+          try {
+            $audit = Get-Content -LiteralPath npm-audit-all.json -Raw -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
+          } catch {
+            throw "Не удалось прочитать JSON полного аудита: $($_.Exception.Message)"
+          }
+          $counts = $audit.metadata.vulnerabilities
+          if ($null -ne $audit.error -or $counts -isnot [pscustomobject] -or $audit.vulnerabilities -isnot [pscustomobject]) {
+            throw 'Полный аудит содержит ошибку либо не содержит metadata и vulnerabilities ожидаемого вида.'
+          }
+          foreach ($field in @('info', 'low', 'moderate', 'high', 'critical', 'total')) {
+            if ("$($counts.$field)" -notmatch '^\d+$') {
+              throw "Отсутствует или поврежден счетчик полного аудита: $field."
+            }
+          }
+          if ([long]$counts.high -gt 0 -or [long]$counts.critical -gt 0) {
+            throw 'Полный аудит выявил высокие или критические уязвимости; исключение неприменимо.'
+          }
+          if ($env:NPM_AUDIT_EXIT -eq '1' -and [long]$counts.total -eq 0) {
+            throw 'npm audit завершился ошибкой без описанных уязвимостей.'
+          }
+          $knownUrls = @(
+            'https://github.com/advisories/GHSA-3g3m-2fjr-6pw4'
+            'https://github.com/advisories/GHSA-g3hv-75wg-m249'
+          )
+          $directAdvisories = 0
+          foreach ($vulnerability in $audit.vulnerabilities.PSObject.Properties.Value) {
+            foreach ($advisory in @($vulnerability.via)) {
+              if ($advisory -is [string]) { continue }
+              if ($advisory -isnot [pscustomobject] -or [string]::IsNullOrWhiteSpace([string]$advisory.url)) {
+                throw 'Поврежден исходный бюллетень полного аудита: отсутствует URL.'
+              }
+              if ($advisory.url -notin $knownUrls) {
+                throw "Новый бюллетень вне согласованного исключения: $($advisory.url)"
+              }
+              $directAdvisories += 1
+            }
+          }
+          if ([long]$counts.total -gt 0 -and $directAdvisories -eq 0) {
+            throw 'Отчет содержит уязвимости без исходных бюллетеней; исключение проверить нельзя.'
+          }
+          Write-Output 'Границы исключения соблюдены. Исходный результат npm audit и замечания сохранены в отчете.'
