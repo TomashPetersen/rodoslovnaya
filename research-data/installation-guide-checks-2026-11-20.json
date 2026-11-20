@@ -1,0 +1,341 @@
+{
+  "checkedOn": "2026-11-20",
+  "timezone": "Europe/Astrakhan",
+  "scope": "Полная инструкция установки для агента Натальи; приложение не менялось",
+  "baselineCommit": "5e743e3bebff1d8abe3780243c642380ac110575",
+  "status": "Локальные проверки завершены; запись подготовлена перед отправкой",
+  "environment": {
+    "os": "Windows",
+    "node": "24.15.0",
+    "npm": "11.12.1",
+    "browser": "Microsoft Edge",
+    "browserVersion": "157.0.4341.60",
+    "CI": "1",
+    "mobile": "Имитация Pixel 7; настоящее устройство не проверяется"
+  },
+  "applicationInputsUnchanged": true,
+  "applicationInputCount": 49,
+  "applicationInputHashes": {
+    "app/src/transfer/archive-client.ts": "d0d7f5d97d6007fdd1b0afefbfd922480891d7771d2dc32920c8fabf5b2d7081",
+    "app/src/transfer/edition.test.ts": "ade82c98169ed6cc0249e7aee93c845885da7bd3b6a55fd08b835ca5516c429c",
+    "app/src/styles.css": "7dff522bf527158f0bb215d9f86918ac2579d44365a93f5527314d17dbc88b49",
+    "app/index.html": "9aa8a2bc8db272788480b167e0987be3537727eb1de3384acd0eef956cab1f89",
+    "app/tests/journey.spec.ts": "42ec148cc3bb7b05b7b231d0935406a16a8ec535d2a3fdd1597510ea4da70be0",
+    "app/tests/migration.spec.ts": "8ba308613400070e9f19a0efb9a32a45cfc671b745499da65c127e42e230c3c0",
+    "app/src/storage/use-project.ts": "7f63a8c3c9f0344d90beccb84e6af0a94afdb5738556b32ca7766b7587a197a2",
+    "app/src/transfer/archive-client.test.ts": "af52fb94d9339c4e48673f911266d01b63ffbc8138b3587344d9cdc43ae7f79c",
+    "app/src/transfer/archive.worker.ts": "64f8452ee45c9245ba07488cbef4c1c40c73bb98b671c57c7c2bea0b12a92878",
+    "app/src/domain/capacity.test.ts": "14c629fcf82821a330571bb0a4482a66150d93db868ae782bef5b8a159745b2e",
+    "app/src/components/tree-layout.test.ts": "fcd66b3fbf507e7ab139b06cf55e39744841590baf692f52e9212e9db17ff6b0",
+    "app/public/icon.svg": "0fa1421feb7859af07e6e51b863ec919fff7569dd83182a887e57ce0564f8ebd",
+    "app/package-lock.json": "35d5b8fb8d5a868a368e381f87c4440a077d8068ecce11dc6076e11658f9245a",
+    "app/src/storage/editor-lock.ts": "a6f3d94d2bea903b1a99d7b7894124998900140b76d1d1c40017144465b9cb71",
+    "app/src/transfer/archive.test.ts": "9345ca304b921a2c940b1597e81ebbf2f60bf473744289cd7dd7d5e1fe98f7f6",
+    "app/src/components/editor-common.tsx": "54eb4e46113dc63affd2db0f6f542c3251d0dd3da6c2dcd8b48dd2e63859f219",
+    "app/src/components/FamilyTree.tsx": "2c42045294b8c9762e9d9d5dc783d1d74068e555ae473bf9f7e98753153e3e0c",
+    "app/tests/recovery.spec.ts": "2859b671d72003bd10051647bbd04de63669120d6b085d3fb8e24067099445a6",
+    "app/src/domain/capacity.ts": "522ad2bbf1c52d6d1cad1723c24e7a557d8c7c0e02fc4bba8fd9055f9ce532ef",
+    "app/src/App.tsx": "d3435cf17e43c2454783c0700e2ed4c55b4460e4acfbad9e2ff6126ed2ae9500",
+    "app/public/icon-192.png": "1a0c86c81bcc026fa622e09ef2d4e75d6def0358afb17f2618ef256da43526a1",
+    "app/src/storage/repository-mvp.test.ts": "fcad2a567369787f4f99974ddc9917aecdcd4412a67d7c017743c0c8d3d9b3eb",
+    "app/src/components/MaterialsView.tsx": "640c725a344da6ffc6da5a04bcd52837d9d8a096587128fa2197492067abe421",
+    "app/playwright.config.ts": "7be58d41e0d766da54550bd11b19d52ceff36787905286a9a3c8716d17ddb9a3",
+    "app/src/storage/repository.test.ts": "409589874779ed6fdc84400f56e0407b77fe4eb5a3d2a8a212e7f033470ec673",
+    "app/src/components/PersonEditor.tsx": "10aa061848994eec0aac7efaab837cda5c553aabd1cc655484dd6c7c5c2336b4",
+    "app/vite.config.ts": "17034539c76ec403f6e317fe27a2ec14647c7353cf110feb35e922c3186dc7b8",
+    "app/tests/volume.spec.ts": "85e84e3ae0e50d66ac7e4a7d107643feca97b1f67ca3e96e7260193a26844f03",
+    "app/src/components/EntryForms.tsx": "70beef930a04a0ce9829f2188f925d8c48ac483f31837b1798891a3619e4782b",
+    "app/src/components/tree-layout.ts": "aa2e02252308029960b93e4c71679b0e85fa39f08266002bbdba22568548edd0",
+    "app/src/transfer/edition.ts": "9b372bfad3176460b27f89c70c5800457dd124889fefa0b3cf533b372b442ef2",
+    "app/src/storage/use-project.test.ts": "52fbefc0faf5b90f3f03de8a242b26289b3c072873542310bd7293657fc1de97",
+    "app/eslint.config.js": "e0e2c6707a364cbf907d40e54cfd311a18a81c44da1e93805f0f5707fa9466dd",
+    "app/src/components/family-tree.css": "3c7ccf48770f9bac10658766824fe2c0091c157c94124d20cdf1d9ea5ab0e1ee",
+    "app/src/storage/repository.ts": "9ad6d1aae635062d025750e3317ca3094beef279b134c45e06bee4b63b8700d4",
+    "app/tsconfig.json": "20d4989af22b81ccc2b8b1614351bc6c01b7dafcf4c8a8425f5e8e235aa3bbd3",
+    "app/tests/timing.spec.ts": "61c3c73a5f907d00bcb2e82b4c5403e413a7777e306a9fe02389e66fa3cacc23",
+    "app/public/icon-512.png": "d915cbd85a545cc2608f0265411b66aee3ba81cd81df216680fc00f54e20815b",
+    "app/src/components/ArchiveView.tsx": "2cf893a1dd8e1d2d27900ac96caadc481b0f674d68e061e48ad31a4de06bde8b",
+    "app/tests/mvp.spec.ts": "7c22330f0b3f64bd944b628c7e382d043d5bc8da8bdc15942d32f2fd1cb3a011",
+    "app/src/media.ts": "6cecac1374b54c073bde66df06a4a6e509d6e49b2eb6cea43c9dee5496fae755",
+    "app/public/apple-touch-icon.png": "3ae7f53173ffc27a2c9f80db3baa259b8f30f3d3dde3c8327c0757bf88f9f340",
+    "app/src/domain/model.ts": "477b5243e0c1d1ccba886439215028aa7cba80aced1a7db3454acb6c869132da",
+    "app/README.md": "5960896cff9e74a3d8735b5452d982e0d51233438cfab5fe621caf023b832814",
+    "app/src/domain/model.test.ts": "7a43b3ca21fe4c19831b2c745492cc785161e5af561c5a290e2ff2e585ca3c44",
+    "app/src/domain/types.ts": "b07ce3baa13e92f76680e871a22301fbbf992704749b4c380c494fd48b64e7b6",
+    "app/src/transfer/archive.ts": "1a7dabca3bd20aaf8ae694a63f7c6739bc6de019955298bebb6a37c9291bfc64",
+    "app/package.json": "adab51aa2d7df726d19fc96556c4524ed076ae23463fdf53260c9fd248a9594f",
+    "app/src/main.tsx": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0"
+  },
+  "checks": [
+    {
+      "name": "format",
+      "command": "npm.cmd run format:check",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:17:21.8118668+04:00",
+      "finishedAt": "2026-11-20T15:17:27.2669277+04:00"
+    },
+    {
+      "name": "lint",
+      "command": "npm.cmd run lint",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:17:27.3021738+04:00",
+      "finishedAt": "2026-11-20T15:17:40.0274014+04:00"
+    },
+    {
+      "name": "typecheck",
+      "command": "npm.cmd run typecheck",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:17:40.0319671+04:00",
+      "finishedAt": "2026-11-20T15:17:47.765066+04:00"
+    },
+    {
+      "name": "unit",
+      "command": "npm.cmd test",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:17:47.7689351+04:00",
+      "finishedAt": "2026-11-20T15:17:55.9416954+04:00"
+    },
+    {
+      "name": "build",
+      "command": "npm.cmd run build",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:17:55.955004+04:00",
+      "finishedAt": "2026-11-20T15:18:16.5296671+04:00"
+    },
+    {
+      "name": "audit-production",
+      "command": "npm.cmd audit --omit=dev --json",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:18:16.5319989+04:00",
+      "finishedAt": "2026-11-20T15:18:19.6307526+04:00"
+    },
+    {
+      "name": "audit-all",
+      "command": "npm.cmd audit --json",
+      "exitCode": 1,
+      "status": "failed",
+      "startedAt": "2026-11-20T15:18:19.6369682+04:00",
+      "finishedAt": "2026-11-20T15:18:29.8386197+04:00"
+    },
+    {
+      "name": "browser-chromium",
+      "command": "npm.cmd run test:browser -- --project=chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-chromium-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:18:29.8428433+04:00",
+      "finishedAt": "2026-11-20T15:19:47.1125567+04:00"
+    },
+    {
+      "name": "browser-mobile-journey",
+      "command": "npm.cmd run test:browser -- tests/journey.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-journey-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:19:47.1168486+04:00",
+      "finishedAt": "2026-11-20T15:20:14.2877355+04:00"
+    },
+    {
+      "name": "browser-mobile-migration",
+      "command": "npm.cmd run test:browser -- tests/migration.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-migration-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:20:14.2913668+04:00",
+      "finishedAt": "2026-11-20T15:20:22.3629442+04:00"
+    },
+    {
+      "name": "browser-mobile-mvp",
+      "command": "npm.cmd run test:browser -- tests/mvp.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-mvp-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:20:22.3672985+04:00",
+      "finishedAt": "2026-11-20T15:20:41.1826201+04:00"
+    },
+    {
+      "name": "browser-mobile-recovery",
+      "command": "npm.cmd run test:browser -- tests/recovery.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-recovery-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:20:41.1856925+04:00",
+      "finishedAt": "2026-11-20T15:20:57.6221178+04:00"
+    },
+    {
+      "name": "browser-mobile-timing",
+      "command": "npm.cmd run test:browser -- tests/timing.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-timing-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:20:57.6245755+04:00",
+      "finishedAt": "2026-11-20T15:21:14.4655359+04:00"
+    },
+    {
+      "name": "browser-mobile-volume",
+      "command": "npm.cmd run test:browser -- tests/volume.spec.ts --project=mobile-chromium --timeout=30000 --reporter=json --output=../output/installation-guide-20261120/checks/browser-mobile-volume-artifacts",
+      "exitCode": 0,
+      "status": "passed",
+      "startedAt": "2026-11-20T15:21:14.4682839+04:00",
+      "finishedAt": "2026-11-20T15:21:25.0767133+04:00"
+    }
+  ],
+  "additionalChecks": [
+    {
+      "name": "audit-boundary",
+      "source": ".github/workflows/checks.yml: Проверить границы исключения полного аудита",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "name": "fixtures",
+      "source": ".github/workflows/checks.yml: Проверить контрольные суммы вымышленных данных",
+      "exitCode": 0,
+      "status": "passed",
+      "checkedFiles": 9
+    }
+  ],
+  "fullAudit": {
+    "exitCode": 1,
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 10,
+      "high": 0,
+      "critical": 0,
+      "total": 10
+    },
+    "automaticallyFixed": false,
+    "knownExceptionBoundaryExitCode": 0
+  },
+  "knowledge": {
+    "selfTestCommand": "node scripts/check-knowledge.mjs --self-test",
+    "selfTestPassed": 33,
+    "selfTestTotal": 33,
+    "checkCommand": "node scripts/check-knowledge.mjs",
+    "finalGraph": {
+      "documents": 26,
+      "localMarkdownLinks": 321,
+      "wikiLinks": 87,
+      "localArtifacts": 0,
+      "errors": 0
+    },
+    "errors": 0
+  },
+  "independentReview": {
+    "documents": [
+      "knowledge/INSTALL-CODEX.md",
+      "README.md",
+      "INDEX.md",
+      "knowledge/INDEX.md",
+      "knowledge/collaboration.md",
+      "plans/2026-11-17-knowledge-navigation.md",
+      "retrospectives/2026-11-20-github-handoff.md"
+    ],
+    "sectionsReviewed": 10,
+    "blockingFindings": 0,
+    "languageReview": "Латиница найдена по точному списку файлов и вручную разобрана; необязательных англицизмов и длинного тире нет",
+    "repeatedCloneAmbiguityFixed": true
+  },
+  "sources": [
+    "https://git-scm.com/install/windows",
+    "https://nodejs.org/en/download/",
+    "https://nodejs.org/dist/latest-v24.x/",
+    "https://www.microsoft.com/edge/download",
+    "https://learn.chatgpt.com/docs/projects#use-local-projects-for-folders-and-codebases"
+  ],
+  "publication": {
+    "repository": "https://github.com/TomashPetersen/rodoslovnaya",
+    "guide": "https://raw.githubusercontent.com/TomashPetersen/rodoslovnaya/main/knowledge/INSTALL-CODEX.md",
+    "targetBranch": "main",
+    "remotePushAndCi": "Проверяются после создания коммита; этот журнал фиксирует подготовку"
+  },
+  "limitations": [
+    "Установка на компьютере Натальи не выполнялась; проверено содержание инструкции и текущее приложение на Windows/Edge",
+    "Установка системных инструментов на чистой Windows не воспроизводилась на этой машине, где они уже установлены",
+    "Локальные зависимости не переустанавливались поверх соединения каталогов; чистую установку выполняет GitHub Actions",
+    "Замечания полного аудита средств разработки остаются открытыми",
+    "Настоящие Android/iPhone и самостоятельное семейное испытание остаются открытыми",
+    "У Натальи пока нет GitHub, приглашение не отправлялось",
+    "Размещенное приложение не обновлялось"
+  ],
+  "totals": {
+    "unit": {
+      "passed": 130,
+      "files": 9
+    },
+    "browser": {
+      "desktop": {
+        "passed": 18,
+        "skipped": 1,
+        "failed": 0,
+        "flaky": 0
+      },
+      "mobile": {
+        "passed": 18,
+        "skipped": 1,
+        "failed": 0,
+        "flaky": 0
+      },
+      "passed": 36,
+      "skipped": 2,
+      "failed": 0,
+      "flaky": 0,
+      "mobileFileCount": 6,
+      "coverageComplete": true,
+      "missingTests": [],
+      "extraTests": [],
+      "method": "Настольный проект целиком; мобильный проект последовательно по шести файлам, каждый в новом процессе. CI=1, timeout 30000."
+    },
+    "productionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "fullAudit": {
+      "exitCode": 1,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 10,
+        "high": 0,
+        "critical": 0,
+        "total": 10
+      },
+      "advisories": [
+        "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+        "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+      ],
+      "exceptionBoundaryPassed": true,
+      "automaticDependencyChanges": false
+    },
+    "fixtures": {
+      "checkedFiles": 9,
+      "allMatched": true
+    }
+  },
+  "skippedTests": [
+    {
+      "file": "recovery.spec.ts",
+      "title": "возврат из списка восстанавливает камеру, а новая карточка не использует старую историю",
+      "project": "chromium"
+    },
+    {
+      "file": "volume.spec.ts",
+      "title": "100 человек, 50 фотографий и 100 МБ оригиналов сохраняются без потерь",
+      "project": "mobile-chromium"
+    }
+  ],
+  "applicationSourceComparison": {
+    "checkedFiles": 49,
+    "allMatched": true,
+    "changed": [],
+    "beforeFingerprintSha256": "b9149dc3419b04136ec7c103a9ff47efec9997c745d13a41585d4d8768f0935a",
+    "afterFingerprintSha256": "b9149dc3419b04136ec7c103a9ff47efec9997c745d13a41585d4d8768f0935a",
+    "fingerprintMethod": "SHA-256 от UTF-8: строки «относительный путь:контрольная сумма SHA-256», отсортированные по пути, с разделителем и завершающим переводом строки LF.",
+    "workflowMatched": true
+  }
+}
