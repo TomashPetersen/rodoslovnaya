@@ -145,3 +145,107 @@ test('основные экраны помещаются на телефоне �
   ).toBeVisible();
   await page.screenshot({ path: info.outputPath('mvp-full.png'), fullPage: true });
 });
+
+test('системная тема меняет оформление дерева без перезагрузки', async ({ page }, info) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await start(page);
+  for (const [name, role, kind] of [
+    ['Вера Семейная', 'parent', 'biological'],
+    ['Зоя Семейная', 'parent', 'adoptive'],
+    ['Иван Семейный', 'partner', null],
+  ] as const) {
+    await page.getByRole('button', { name: 'Добавить родственника', exact: true }).click();
+    const dialog = page.getByRole('dialog');
+    await dialog.getByLabel('Имя родственника').fill(name);
+    await dialog.getByLabel('Кого добавляем').selectOption(role);
+    if (kind) await dialog.getByLabel('Родительство').selectOption(kind);
+    await dialog.getByRole('button', { name: 'Сохранить', exact: true }).click();
+    await expect(dialog).not.toBeVisible();
+  }
+  await page.getByRole('button', { name: 'Дерево', exact: true }).click();
+  const canvas = page.locator('.tree-canvas');
+  const selected = canvas.getByRole('button', { name: 'Открыть карточку: Анна Семейная' });
+  await expect(selected).toHaveAttribute('aria-pressed', 'true');
+  const label = canvas
+    .locator('.react-flow__edgelabel-renderer')
+    .getByText('Биологическое родительство', { exact: true });
+  const tree = page.getByRole('region', { name: 'Дерево выбранной семьи' });
+  const zoom = tree.getByRole('button', { name: 'Увеличить дерево', exact: true });
+  await expect(zoom).toBeVisible();
+  await expect(canvas.getByRole('button', { name: 'Увеличить дерево', exact: true })).toHaveCount(
+    0,
+  );
+
+  for (const palette of [
+    {
+      scheme: 'light',
+      background: 'rgb(241, 244, 251)',
+      surface: 'rgb(255, 255, 255)',
+      selected: 'rgb(224, 232, 255)',
+      muted: 'rgb(55, 68, 93)',
+      accent: 'rgb(23, 66, 196)',
+      related: 'rgb(82, 103, 140)',
+      partner: 'rgb(129, 83, 25)',
+    },
+    {
+      scheme: 'dark',
+      background: 'rgb(10, 17, 34)',
+      surface: 'rgb(25, 36, 58)',
+      selected: 'rgb(38, 54, 91)',
+      muted: 'rgb(199, 211, 234)',
+      accent: 'rgb(155, 183, 255)',
+      related: 'rgb(137, 156, 198)',
+      partner: 'rgb(237, 197, 131)',
+    },
+  ] as const) {
+    await page.emulateMedia({ colorScheme: palette.scheme });
+    await expect(page.locator('html')).toHaveCSS('background-color', palette.background);
+    await expect(canvas.locator('.react-flow')).toHaveCSS('background-color', palette.background);
+    await expect(selected).toHaveCSS('background-color', palette.selected);
+    await expect(selected).toHaveCSS('border-top-color', palette.accent);
+    await expect(selected.locator('.tree-person-dates')).toHaveCSS('color', palette.muted);
+    await expect(canvas.locator('.tree-edge-biological .react-flow__edge-path')).toHaveCSS(
+      'stroke',
+      palette.related,
+    );
+    await expect(label).toHaveCSS('background-color', palette.background);
+    await expect(label).toHaveCSS('color', palette.muted);
+    await expect(canvas.locator('.tree-edge-adoptive .react-flow__edge-path')).toHaveCSS(
+      'stroke-dasharray',
+      '6px, 4px',
+    );
+    await expect(canvas.locator('.tree-edge-partner .react-flow__edge-path')).toHaveCSS(
+      'stroke',
+      palette.partner,
+    );
+    await expect(zoom).toHaveCSS('background-color', palette.surface);
+    await page.keyboard.press('Tab');
+    await zoom.focus();
+    await expect(zoom).toHaveCSS('outline-width', '3px');
+    await expect(zoom).toHaveCSS('outline-color', palette.accent);
+    await tree.screenshot({ path: info.outputPath(`tree-${palette.scheme}.png`) });
+  }
+});
+
+test('длинный рассказ раскрывается из карточки материала', async ({ page }) => {
+  await start(page);
+  const materials = page.getByRole('region', { name: 'Материалы человека' });
+  await page.keyboard.press('Tab');
+  await materials.getByLabel('Добавить фото или документ').focus();
+  await expect(materials.locator('label.button')).toHaveCSS('outline-width', '3px');
+  await materials.getByRole('button', { name: 'Написать историю', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  await dialog.getByLabel('Название истории').fill('Семейная встреча');
+  const ending = 'В конце вечера мы сделали общее фото.';
+  await dialog
+    .getByLabel('Воспоминание', { exact: true })
+    .fill('Семья собралась за большим столом. '.padEnd(239, 'а') + '🙂 ' + ending);
+  await dialog.getByRole('button', { name: 'Сохранить', exact: true }).click();
+  await expect(dialog).not.toBeVisible();
+  await page.getByRole('button', { name: 'Фотографии и истории', exact: true }).click();
+  const card = page.getByRole('article').filter({ hasText: 'Семейная встреча' });
+  await expect(card.getByText(/�/)).toHaveCount(0);
+  await expect(card.getByText(ending, { exact: false })).toBeHidden();
+  await card.getByText('Читать целиком', { exact: true }).click();
+  await expect(card.getByText(ending, { exact: false })).toBeVisible();
+});

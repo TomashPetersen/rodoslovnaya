@@ -2,11 +2,17 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Background,
   BackgroundVariant,
+  BaseEdge,
   Controls,
+  EdgeLabelRenderer,
+  getSmoothStepPath,
+  getStraightPath,
   Handle,
   Position,
   ReactFlow,
+  ReactFlowProvider,
   type Edge,
+  type EdgeProps,
   type Node,
   type NodeProps,
   type ReactFlowInstance,
@@ -102,10 +108,31 @@ function PersonCard({ data }: NodeProps<PersonNode>) {
 
 const nodeTypes = { person: PersonCard };
 
+type RelationshipEdge = Edge<{ partner: boolean }, 'relationship'>;
+
+function RelationshipLine(props: EdgeProps<RelationshipEdge>) {
+  const [path, x, y] = props.data?.partner ? getStraightPath(props) : getSmoothStepPath(props);
+  return (
+    <>
+      <BaseEdge id={props.id} path={path} style={props.style} />
+      <EdgeLabelRenderer>
+        <span
+          className="tree-edge-label"
+          style={{ transform: `translate(-50%, -50%) translate(${x}px, ${y}px)` }}
+        >
+          {props.label}
+        </span>
+      </EdgeLabelRenderer>
+    </>
+  );
+}
+
+const edgeTypes = { relationship: RelationshipLine };
+
 function edgesForBranch(
   branch: BranchProjection,
   positions: Map<string, { x: number; y: number }>,
-): Edge[] {
+): RelationshipEdge[] {
   return branch.relationships.map((relation) => {
     const isPartner = relation.kind === 'partner';
     const pointsRight =
@@ -123,16 +150,15 @@ function edgesForBranch(
       target: relation.toId,
       sourceHandle: isPartner ? `partner-${pointsRight ? 'right' : 'left'}-source` : 'child-out',
       targetHandle: isPartner ? `partner-${pointsRight ? 'left' : 'right'}-target` : 'parent-in',
-      type: isPartner ? 'straight' : 'smoothstep',
+      type: 'relationship',
+      data: { partner: isPartner },
+      className: `tree-edge-${relation.kind}`,
       label,
       style: {
-        stroke: isPartner ? '#b89861' : '#6b8c9b',
-        strokeWidth: isPartner ? 2 : 1.5,
+        stroke: isPartner ? 'var(--partner-line)' : 'var(--control-border)',
+        strokeWidth: 2,
         strokeDasharray: relation.kind === 'adoptive' ? '6 4' : undefined,
       },
-      labelStyle: { fill: '#485f70', fontSize: 10 },
-      labelBgStyle: { fill: '#f5f7fa', fillOpacity: 0.94 },
-      labelBgPadding: [5, 3] as [number, number],
       focusable: false,
       selectable: false,
       deletable: false,
@@ -320,115 +346,126 @@ export default function FamilyTree({
   }
 
   return (
-    <section className="family-tree" aria-label="Дерево выбранной семьи">
-      <div className="tree-toolbar">
-        <div className="tree-depth-controls">
-          <label>
-            Предки{' '}
-            <select
-              aria-label="Поколений предков"
-              value={ancestorDepth}
-              onChange={(event) => changeDepth('ancestor', Number(event.target.value))}
-            >
-              <option value={1}>1 поколение</option>
-              <option value={2}>2 поколения</option>
-              <option value={3}>3 поколения</option>
-            </select>
-          </label>
-          <label>
-            Потомки{' '}
-            <select
-              aria-label="Поколений потомков"
-              value={descendantDepth}
-              onChange={(event) => changeDepth('descendant', Number(event.target.value))}
-            >
-              <option value={1}>1 поколение</option>
-              <option value={2}>2 поколения</option>
-              <option value={3}>3 поколения</option>
-            </select>
-          </label>
+    <ReactFlowProvider>
+      <section className="family-tree" aria-label="Дерево выбранной семьи">
+        <div className="tree-toolbar">
+          <div className="tree-depth-controls">
+            <label>
+              Предки{' '}
+              <select
+                aria-label="Поколений предков"
+                value={ancestorDepth}
+                onChange={(event) => changeDepth('ancestor', Number(event.target.value))}
+              >
+                <option value={1}>1 поколение</option>
+                <option value={2}>2 поколения</option>
+                <option value={3}>3 поколения</option>
+              </select>
+            </label>
+            <label>
+              Потомки{' '}
+              <select
+                aria-label="Поколений потомков"
+                value={descendantDepth}
+                onChange={(event) => changeDepth('descendant', Number(event.target.value))}
+              >
+                <option value={1}>1 поколение</option>
+                <option value={2}>2 поколения</option>
+                <option value={3}>3 поколения</option>
+              </select>
+            </label>
+          </div>
+          <button
+            type="button"
+            className="tree-center-button"
+            onClick={focusSelected}
+            disabled={!current || !!current.error}
+          >
+            К выбранному человеку
+          </button>
         </div>
-        <button
-          type="button"
-          className="tree-center-button"
-          onClick={focusSelected}
-          disabled={!current || !!current.error}
-        >
-          К выбранному человеку
-        </button>
-      </div>
-      <div className="tree-canvas" aria-busy={!current}>
-        <ReactFlow<PersonNode, Edge>
-          style={{ position: 'absolute', inset: 0, width: 'auto', height: 'auto' }}
-          nodes={current?.nodes ?? []}
-          edges={current?.edges ?? []}
-          nodeTypes={nodeTypes}
-          onInit={(instance) => {
-            flow.current = instance;
-          }}
-          nodesDraggable={false}
-          nodesConnectable={false}
-          elementsSelectable={false}
-          deleteKeyCode={null}
-          minZoom={0.12}
-          maxZoom={1.6}
-          onMoveEnd={(_, viewport) => {
-            if (!current) return;
-            savedView.current = {
-              ancestorDepth,
-              descendantDepth,
-              viewport,
-              focusId: branch.selectedId,
-            };
-            onViewRef.current?.(savedView.current);
-          }}
-          aria-label="Схема родственных связей"
-          ariaLabelConfig={{
-            'controls.ariaLabel': 'Масштаб дерева',
-            'controls.zoomIn.ariaLabel': 'Увеличить дерево',
-            'controls.zoomOut.ariaLabel': 'Уменьшить дерево',
-            'controls.fitView.ariaLabel': 'Показать всю ветвь',
-            'node.a11yDescription.default': 'Откройте карточку кнопкой с именем человека.',
-            'node.a11yDescription.keyboardDisabled': 'Откройте карточку кнопкой с именем человека.',
-            'edge.a11yDescription.default': 'Родственная связь.',
-            'handle.ariaLabel': 'Соединение родственной связи',
-          }}
-        >
-          <Background variant={BackgroundVariant.Dots} gap={24} size={1} color="#cbd7df" />
-          <Controls showInteractive={false} aria-label="Масштаб дерева" />
-        </ReactFlow>
-        {!current && (
-          <p className="tree-message" role="status">
-            Размещаем карточки…
+        <div className="tree-canvas" aria-busy={!current}>
+          <ReactFlow<PersonNode, Edge>
+            style={{ position: 'absolute', inset: 0, width: 'auto', height: 'auto' }}
+            nodes={current?.nodes ?? []}
+            edges={current?.edges ?? []}
+            nodeTypes={nodeTypes}
+            edgeTypes={edgeTypes}
+            onInit={(instance) => {
+              flow.current = instance;
+            }}
+            nodesDraggable={false}
+            nodesConnectable={false}
+            elementsSelectable={false}
+            deleteKeyCode={null}
+            minZoom={0.12}
+            maxZoom={1.6}
+            onMoveEnd={(_, viewport) => {
+              if (!current) return;
+              savedView.current = {
+                ancestorDepth,
+                descendantDepth,
+                viewport,
+                focusId: branch.selectedId,
+              };
+              onViewRef.current?.(savedView.current);
+            }}
+            aria-label="Схема родственных связей"
+            ariaLabelConfig={{
+              'controls.ariaLabel': 'Масштаб дерева',
+              'controls.zoomIn.ariaLabel': 'Увеличить дерево',
+              'controls.zoomOut.ariaLabel': 'Уменьшить дерево',
+              'controls.fitView.ariaLabel': 'Показать всю ветвь',
+              'node.a11yDescription.default': 'Откройте карточку кнопкой с именем человека.',
+              'node.a11yDescription.keyboardDisabled':
+                'Откройте карточку кнопкой с именем человека.',
+              'edge.a11yDescription.default': 'Родственная связь.',
+              'handle.ariaLabel': 'Соединение родственной связи',
+            }}
+          >
+            <Background
+              variant={BackgroundVariant.Dots}
+              gap={24}
+              size={1}
+              color="var(--grid-dot)"
+            />
+          </ReactFlow>
+          {!current && (
+            <p className="tree-message" role="status">
+              Размещаем карточки…
+            </p>
+          )}
+          {current?.error && (
+            <div className="tree-message tree-error" role="alert">
+              <p>{current.error}</p>
+              <button type="button" onClick={() => setAttempt((value) => value + 1)}>
+                Повторить размещение
+              </button>
+            </div>
+          )}
+        </div>
+        <div className="tree-viewport-tools">
+          <Controls showInteractive={false} orientation="horizontal" aria-label="Масштаб дерева" />
+        </div>
+        <div className="tree-legend">
+          <span>
+            <i className="tree-legend-line" /> Биологическое
+          </span>
+          <span>
+            <i className="tree-legend-line tree-legend-adoptive" /> Приемное
+          </span>
+          <span>
+            <i className="tree-legend-line tree-legend-partner" /> Партнерство
+          </span>
+          <span className="tree-visible-count">На схеме: {branch.people.length}</span>
+        </div>
+        {branch.hiddenCount > 0 && (
+          <p className="tree-limit" role="status">
+            Часть ветви скрыта: {branch.hiddenCount}. На схеме показано не более 80 человек.
+            Выберите нужную карточку в списке людей, чтобы рассмотреть другую часть семьи.
           </p>
         )}
-        {current?.error && (
-          <div className="tree-message tree-error" role="alert">
-            <p>{current.error}</p>
-            <button type="button" onClick={() => setAttempt((value) => value + 1)}>
-              Повторить размещение
-            </button>
-          </div>
-        )}
-      </div>
-      <div className="tree-legend">
-        <span>
-          <i className="tree-legend-line" /> Биологическое
-        </span>
-        <span>
-          <i className="tree-legend-line tree-legend-adoptive" /> Приемное
-        </span>
-        <span>
-          <i className="tree-legend-line tree-legend-partner" /> Партнерство
-        </span>
-        <span className="tree-visible-count">На схеме: {branch.people.length}</span>
-      </div>
-      {branch.hiddenCount > 0 && (
-        <p className="tree-limit" role="status">
-          Часть ветви скрыта: {branch.hiddenCount}. На схеме показано не более 80 человек. Выберите
-          нужную карточку в списке людей, чтобы рассмотреть другую часть семьи.
-        </p>
-      )}
-    </section>
+      </section>
+    </ReactFlowProvider>
   );
 }

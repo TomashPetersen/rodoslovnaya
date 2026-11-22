@@ -13,8 +13,8 @@ export default defineConfig({
         short_name: 'Родословная',
         description: 'История вашей семьи на вашем устройстве',
         lang: 'ru',
-        theme_color: '#285e73',
-        background_color: '#f5f7fa',
+        theme_color: '#f1f4fb',
+        background_color: '#f1f4fb',
         display: 'standalone',
         start_url: './',
         icons: [

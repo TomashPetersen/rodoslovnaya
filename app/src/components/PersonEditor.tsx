@@ -72,9 +72,21 @@ export default function PersonEditor(props: Props) {
       </button>
       <div className="profile-head">
         <Portrait person={person} project={project} urls={urls} />
-        <h2>{person.name}</h2>
-        <p>{person.birthDate ? dateLabel(person.birthDate) : 'Начните с того, что знаете'}</p>
+        <div>
+          <h2>{person.name}</h2>
+          <p className="profile-dates">
+            {person.birthDate ? dateLabel(person.birthDate) : 'Дата рождения не указана'}
+            {person.deathDate && <span>Дата смерти {dateLabel(person.deathDate)}</span>}
+          </p>
+        </div>
       </div>
+      <button
+        className="primary profile-primary-action"
+        disabled={disabled}
+        onClick={props.onRelative}
+      >
+        Добавить родственника
+      </button>
       <fieldset disabled={disabled} className="profile-fields">
         {field('name', 'Имя и фамилия')}
         <label>
@@ -96,30 +108,30 @@ export default function PersonEditor(props: Props) {
         </div>
         <small>Год, ГГГГ-ММ или ГГГГ-ММ-ДД. Знак ~ означает «около».</small>
       </fieldset>
-      <div className="panel-actions">
-        <button disabled={disabled} onClick={props.onRelative}>
-          Добавить родственника
-        </button>
-        <label className={`button ${disabled ? 'disabled' : ''}`}>
-          Добавить фото или документ
-          <input
-            className="sr-only"
-            type="file"
-            accept="image/jpeg,image/png,image/webp,application/pdf"
-            aria-label="Добавить фото или документ"
-            disabled={disabled}
-            onChange={(event) => {
-              const file = event.target.files?.[0];
-              event.target.value = '';
-              if (file) props.onFile(file);
-            }}
-          />
-        </label>
-        <button disabled={disabled} onClick={props.onStory}>
-          Написать историю
-        </button>
-        <button onClick={props.onMaterials}>Фотографии и истории</button>
-      </div>
+      <section className="panel-materials" aria-label="Материалы человека">
+        <h3>Материалы человека</h3>
+        <div className="panel-actions">
+          <label className={`button ${disabled ? 'disabled' : ''}`}>
+            Добавить фото или документ
+            <input
+              className="sr-only"
+              type="file"
+              accept="image/jpeg,image/png,image/webp,application/pdf"
+              aria-label="Добавить фото или документ"
+              disabled={disabled}
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                event.target.value = '';
+                if (file) props.onFile(file);
+              }}
+            />
+          </label>
+          <button disabled={disabled} onClick={props.onStory}>
+            Написать историю
+          </button>
+          <button onClick={props.onMaterials}>Фотографии и истории</button>
+        </div>
+      </section>
       <details className="person-details">
         <summary>Другие сведения</summary>
         <fieldset disabled={disabled} className="profile-fields">

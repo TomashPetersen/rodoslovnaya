@@ -38,10 +38,7 @@ export default function MaterialsView(props: Props) {
         </button>
       )}
       <div className="section-heading">
-        <div>
-          <span className="eyebrow">ФОТОГРАФИИ И РАССКАЗЫ</span>
-          <h2>Семейные материалы</h2>
-        </div>
+        <h2>Семейные материалы</h2>
       </div>
       <div className="material-toolbar">
         <label>
@@ -83,68 +80,94 @@ export default function MaterialsView(props: Props) {
         {!filter && ' Для добавления фотографии выберите человека.'}
       </p>
       <div className="media-grid">
-        {media.map((item) => (
-          <article className="media-card" key={item.id}>
-            <button
-              className="media-open"
-              onClick={() => props.onOpen(item)}
-              aria-label={`Открыть материал: ${item.caption || item.name}`}
-            >
-              {urls[item.id] ? (
-                <img src={urls[item.id]} alt={item.caption || 'Семейная фотография'} />
-              ) : (
-                <span className="document-placeholder">
-                  PDF<span>Открыть документ</span>
-                </span>
-              )}
-            </button>
-            <div className="media-caption">
-              <label>
-                Подпись
-                <input
-                  aria-label={`Подпись ${item.name}`}
-                  value={props.captionDrafts[item.id]?.value ?? item.caption}
-                  disabled={disabled}
-                  onChange={(event) => props.onCaption(item, event.target.value)}
-                />
-              </label>
-              {props.captionDrafts[item.id]?.error && (
-                <>
-                  <p role="alert" className="field-error">
-                    {props.captionDrafts[item.id].error}
-                  </p>
-                  <button className="text-button" onClick={() => props.onResetCaption(item.id)}>
-                    Вернуть сохраненное значение
+        {media.map((item) => {
+          const isDocument = item.mime === 'application/pdf';
+          const title = item.caption || item.name;
+          return (
+            <article className="media-card" key={item.id}>
+              <button
+                className={isDocument ? 'media-open document-open' : 'media-open'}
+                onClick={() => props.onOpen(item)}
+                aria-label={`Открыть материал: ${title}`}
+              >
+                {isDocument ? (
+                  <>
+                    <span className="document-type" aria-hidden="true">
+                      PDF
+                    </span>
+                    <span className="document-title">{title}</span>
+                    <span className="document-label">Открыть документ</span>
+                  </>
+                ) : urls[item.id] ? (
+                  <img src={urls[item.id]} alt={item.caption || 'Семейная фотография'} />
+                ) : (
+                  <span className="photo-placeholder">Открыть фотографию</span>
+                )}
+              </button>
+              <div className="media-caption">
+                <label>
+                  Подпись
+                  <input
+                    aria-label={`Подпись ${item.name}`}
+                    value={props.captionDrafts[item.id]?.value ?? item.caption}
+                    disabled={disabled}
+                    onChange={(event) => props.onCaption(item, event.target.value)}
+                  />
+                </label>
+                {props.captionDrafts[item.id]?.error && (
+                  <>
+                    <p role="alert" className="field-error">
+                      {props.captionDrafts[item.id].error}
+                    </p>
+                    <button className="text-button" onClick={() => props.onResetCaption(item.id)}>
+                      Вернуть сохраненное значение
+                    </button>
+                  </>
+                )}
+                <p>{names(item.peopleIds)}</p>
+                <div className="inline-actions">
+                  <button
+                    className="text-button"
+                    disabled={disabled}
+                    onClick={() => props.onEdit('media', item)}
+                  >
+                    Изменить участников и подпись
                   </button>
-                </>
-              )}
-              <p>{names(item.peopleIds)}</p>
-              <div className="inline-actions">
-                <button
-                  className="text-button"
-                  disabled={disabled}
-                  onClick={() => props.onEdit('media', item)}
-                >
-                  Изменить участников и подпись
-                </button>
-                <button
-                  className="text-button danger"
-                  disabled={disabled}
-                  onClick={() => props.onDelete('media', item.id)}
-                >
-                  В корзину
-                </button>
+                  <button
+                    className="text-button danger"
+                    disabled={disabled}
+                    onClick={() => props.onDelete('media', item.id)}
+                  >
+                    В корзину
+                  </button>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
       <div className="stories">
         {stories.map((story) => (
           <article className="story-card" key={story.id}>
-            <span className="eyebrow">СЕМЕЙНАЯ ИСТОРИЯ</span>
             <h3>{story.title}</h3>
-            <p>{story.text}</p>
+            {story.text.length > 240 ? (
+              <details className="story-reading">
+                <summary>
+                  <span className="story-excerpt">
+                    {story.text
+                      .slice(0, 240)
+                      .replace(/[\uD800-\uDBFF]$/, '')
+                      .trimEnd()}
+                    …
+                  </span>
+                  <span className="story-expand">Читать целиком</span>
+                  <span className="story-collapse">Свернуть</span>
+                </summary>
+                <p>{story.text}</p>
+              </details>
+            ) : (
+              <p>{story.text}</p>
+            )}
             <small>{names(story.peopleIds)}</small>
             <div className="inline-actions">
               <button disabled={disabled} onClick={() => props.onEdit('story', story)}>

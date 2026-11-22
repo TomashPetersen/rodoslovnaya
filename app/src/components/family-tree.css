@@ -4,10 +4,16 @@
   min-height: 520px;
   height: 100%;
   overflow: hidden;
-  border: 1px solid #dce5eb;
+  border: 1px solid var(--line);
   border-radius: 16px;
-  background: #f5f7fa;
-  color: #203349;
+  background: var(--page-bg);
+  color: var(--text);
+  --xy-background-color: var(--page-bg);
+  --xy-controls-button-background-color: var(--surface);
+  --xy-controls-button-background-color-hover: var(--selected);
+  --xy-controls-button-color: var(--accent);
+  --xy-controls-button-color-hover: var(--text);
+  --xy-controls-button-border-color: var(--line);
 }
 
 .tree-toolbar {
@@ -16,8 +22,8 @@
   align-items: center;
   gap: 12px;
   padding: 14px 18px;
-  border-bottom: 1px solid #dce5eb;
-  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .tree-depth-controls {
@@ -38,10 +44,10 @@
 .tree-center-button,
 .tree-error button {
   min-height: 44px;
-  border: 1px solid #cbd7df;
+  border: 1px solid var(--control-border);
   border-radius: 8px;
-  background: #ffffff;
-  color: #285e73;
+  background: var(--surface);
+  color: var(--accent);
   font: inherit;
   font-size: 12px;
   padding: 8px 10px;
@@ -84,30 +90,29 @@
   align-items: center;
   gap: 12px;
   padding: 15px;
-  border: 1px solid #d7e0e6;
+  border: 1px solid var(--control-border);
   border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 3px 10px #20334908;
-  color: #203349;
+  background: var(--surface);
+  color: var(--text);
   text-align: left;
   font-family: inherit;
   cursor: pointer;
 }
 
 .tree-person:hover {
-  border-color: #7297a8;
+  border-color: var(--accent);
 }
 
 .tree-person-active {
-  border: 2px solid #285e73;
+  border: 2px solid var(--accent);
   padding: 14px;
-  box-shadow: 0 0 0 4px #285e730c;
+  background: var(--selected);
 }
 
 .tree-person:focus-visible,
 .family-tree select:focus-visible,
 .family-tree button:focus-visible {
-  outline: 3px solid #b89861;
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -118,15 +123,15 @@
   height: 46px;
   place-items: center;
   border-radius: 20px 20px 10px 10px;
-  background: #e8eff3;
-  color: #426878;
+  background: var(--selected);
+  color: var(--muted);
   font-size: 14px;
   font-weight: 600;
 }
 
 .tree-person-active .tree-person-initials {
-  background: #285e73;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .tree-person-details {
@@ -148,14 +153,14 @@
 
 .tree-person-dates {
   overflow: hidden;
-  color: #697d8c;
+  color: var(--muted);
   font-size: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .tree-person-repeat {
-  color: #8b6c37;
+  color: var(--muted);
   font-size: 10px;
 }
 
@@ -163,26 +168,52 @@
   width: 4px;
   height: 4px;
   border: 0;
-  background: #9eb4c0;
+  background: var(--control-border);
 }
 
-.tree-canvas .react-flow__controls {
-  border: 1px solid #dce5eb;
+.tree-edge-label {
+  position: absolute;
+  padding: 2px 5px;
+  background: var(--page-bg);
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.tree-viewport-tools {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.tree-viewport-tools .react-flow__controls {
+  position: static;
+  margin: 0;
+  border: 1px solid var(--control-border);
   border-radius: 10px;
-  box-shadow: 0 3px 10px #20334908;
+  box-shadow: none;
   overflow: hidden;
 }
 
-.tree-canvas .react-flow__controls-button {
+.tree-viewport-tools .react-flow__controls-button {
   width: 44px;
   height: 44px;
   box-sizing: border-box;
-  color: #285e73;
+}
+
+.tree-viewport-tools .react-flow__controls-button:focus-visible {
+  outline-offset: -4px;
 }
 
 .tree-canvas .react-flow__attribution {
   font-size: 9px;
-  background: #ffffffcc;
+  background: var(--surface);
+}
+
+.tree-canvas .react-flow__attribution a {
+  color: var(--muted);
 }
 
 .tree-message {
@@ -195,8 +226,8 @@
   gap: 14px;
   margin: 0;
   padding: 24px;
-  background: #f5f7faed;
-  color: #526b7b;
+  background: var(--page-bg);
+  color: var(--muted);
   text-align: center;
   font-size: 14px;
 }
@@ -207,9 +238,9 @@
   align-items: center;
   gap: 16px;
   padding: 12px 18px;
-  border-top: 1px solid #dce5eb;
+  border-top: 1px solid var(--line);
   font-size: 11px;
-  color: #617787;
+  color: var(--muted);
 }
 
 .tree-legend > span {
@@ -220,7 +251,7 @@
 
 .tree-legend-line {
   width: 18px;
-  border-top: 2px solid #6b8c9b;
+  border-top: 2px solid var(--control-border);
 }
 
 .tree-legend-adoptive {
@@ -228,7 +259,7 @@
 }
 
 .tree-legend-partner {
-  border-top-color: #b89861;
+  border-top-color: var(--partner-line);
 }
 
 .tree-visible-count {
@@ -240,7 +271,7 @@
   margin: 0;
   font-size: 12px;
   line-height: 1.5;
-  color: #617787;
+  color: var(--muted);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -288,6 +319,10 @@
     padding: 12px;
     gap: 12px;
     font-size: 10px;
+  }
+
+  .tree-viewport-tools {
+    padding-inline: 12px;
   }
 
   .tree-visible-count {
